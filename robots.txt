@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Certificate PDFs are intentionally crawlable: they are evidence of the
+# credentials listed on the page and are useful in search results.
+Allow: /certificates/
+
+# No crawl-value in build tooling.
+Disallow: /tools/
+
+Sitemap: https://bagjasatrio.vercel.app/sitemap.xml
+

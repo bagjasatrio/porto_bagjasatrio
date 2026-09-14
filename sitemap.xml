@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Single-page portfolio: one URL. The sitemap exists so the canonical host is
+  discoverable and so the certificate PDFs can be listed individually.
+  Update <lastmod> when the page content changes.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://bagjasatrio.vercel.app/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://bagjasatrio.vercel.app/certificates/Developing%20AI%20Applications%20with%20Python%20and%20Flask.pdf</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://bagjasatrio.vercel.app/certificates/Python%20for%20Data%20Science%2C%20AI%20%26%20Development.pdf</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://bagjasatrio.vercel.app/certificates/Supervised%20Machine%20LearningClassification.pdf</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://bagjasatrio.vercel.app/certificates/Supervised%20Machine%20LearningRegression.pdf</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://bagjasatrio.vercel.app/certificates/Unsupervised%20Machine%20Learning.pdf</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://bagjasatrio.vercel.app/certificates/Exploratory%20Data%20Analysis%20for%20Machine%20Learning.pdf</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://bagjasatrio.vercel.app/certificates/DevOps%20Capstone%20Project.pdf</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://bagjasatrio.vercel.app/certificates/Continuous%20Integration%20and%20Continuous%20Delivery%20%28CICD%29.pdf</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://bagjasatrio.vercel.app/certificates/introduction%20to%20devops.pdf</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://bagjasatrio.vercel.app/certificates/Introduction%20to%20Software%20Engineering.pdf</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://bagjasatrio.vercel.app/certificates/Introduction%20to%20Agile%20Development%20and%20Scrum.pdf</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://bagjasatrio.vercel.app/certificates/Introduction%20to%20Test%20and%20Behavior%20Driven%20Development.pdf</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://bagjasatrio.vercel.app/certificates/Sertifikat-gemawira-udinus-literasi-ai-untuk-semua-kenali-gunakan-ciptakan-muhammad-bagja-satrio.pdf</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
+

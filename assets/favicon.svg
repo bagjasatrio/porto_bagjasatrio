@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="32" height="32" shape-rendering="crispEdges">
+  <title>Muhammad Bagja Satrio</title>
+  <!--
+    A favicon is cached and rendered outside the page, so it cannot read the
+    page's CSS custom properties or know which theme the toggle selected. The
+    best it can do is follow the OS preference, which is what the media query
+    below does: the mark goes dark on a dark-mode machine.
+
+    This means a visitor who manually picks dark on a light-mode OS keeps a
+    light favicon. That is a platform limit, not an oversight.
+  -->
+  <style>
+    @media (prefers-color-scheme: dark) {
+      .ink { fill: #e6e8f0; }
+      .bg { fill: #12121c; }
+      .teal { fill: #2ec4ae; }
+      .magenta { fill: #ff5c93; }
+    }
+  </style>
+  <rect class="ink" x="0" y="0" width="16" height="16" fill="#1a1a24"/>
+  <rect class="bg" x="1" y="1" width="14" height="14" fill="#f4f5f0"/>
+  <rect class="teal" x="1" y="1" width="14" height="2" fill="#008a7a"/>
+  <rect class="teal" x="3" y="3" width="10" height="2" fill="#008a7a"/>
+  <rect class="ink" x="2" y="5" width="12" height="1" fill="#1a1a24"/>
+  <rect x="3" y="6" width="10" height="5" fill="#ffe0bd"/>
+  <rect class="ink" x="4" y="7" width="3" height="2" fill="#1a1a24"/>
+  <rect class="ink" x="9" y="7" width="3" height="2" fill="#1a1a24"/>
+  <rect x="5" y="7" width="1" height="1" fill="#39ff14"/>
+  <rect x="10" y="7" width="1" height="1" fill="#39ff14"/>
+  <rect class="magenta" x="6" y="10" width="4" height="1" fill="#c2185b"/>
+  <rect class="ink" x="2" y="12" width="12" height="3" fill="#1a1a24"/>
+  <rect class="teal" x="3" y="13" width="3" height="1" fill="#008a7a"/>
+  <rect class="magenta" x="10" y="13" width="3" height="1" fill="#c2185b"/>
+</svg>

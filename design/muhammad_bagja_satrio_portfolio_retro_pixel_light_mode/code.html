@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DotGothic16&amp;family=Press+Start+2P&amp;family=Silkscreen:wght@400;700&amp;family=VT323&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.pixel-border{box-shadow:4px 4px 0px #1a1a24;}.pixel-border-sm{box-shadow:2px 2px 0px #1a1a24;}.pixel-btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0px #1a1a24;}@media(min-width:1024px){.crt-overlay{position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,0.03) 0px,rgba(0,0,0,0.03) 1px,transparent 1px,transparent 3px);z-index:9999;}}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "trophy-gold": "#b36b00", "surface-bright": "#ffffff", "surface-container-low": "#f4f6ef", "on-error-container": "#93000a", "primary-fixed-dim": "#007163", "surface-tint": "#008a7a", "on-error": "#ffffff", "inverse-primary": "#83f6e2", "on-tertiary-container": "#ffffff", "on-surface": "#12121c", "on-tertiary": "#ffffff", "secondary": "#c2185b", "secondary-fixed-dim": "#b5005c", "inverse-surface": "#1b1b25", "surface-alt": "#ffffff", "surface-border": "#1a1a24", "on-surface-variant": "#4a4f5c", "on-secondary-fixed-variant": "#8e0047", "error-container": "#ffdad6", "tertiary-fixed": "#7f5300", "on-background": "#12121c", "on-primary-fixed-variant": "#005047", "error": "#ba1a1a", "background": "#f4f5f0", "tertiary": "#7f5300", "primary": "#12121c", "tertiary-fixed-dim": "#ffb950", "on-secondary-container": "#ffffff", "text-muted": "#5e6573", "surface-container-high": "#eaece4", "surface-dim": "#e2e6dc", "on-secondary-fixed": "#3f001c", "outline-variant": "#c9ced6", "surface-container": "#f0f2ea", "on-primary-fixed": "#00201c", "primary-container": "#008a7a", "secondary-container": "#c2185b", "on-secondary": "#ffffff", "surface-container-highest": "#e2e5dc", "tertiary-container": "#b36b00", "primary-fixed": "#008a7a", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "text-primary": "#12121c", "secondary-fixed": "#ffd9e1", "surface": "#f4f5f0", "surface-variant": "#e4e8dd", "outline": "#1a1a24", "on-primary-container": "#ffffff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.375rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "gutter": "1.5rem", "margin": "2rem", "gutter-mobile": "1rem", "margin-mobile": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-md": "1rem", "space-xs": "0.25rem" }, "fontFamily": { "display-hero-mobile": [ "\"Press Start 2P, monospace\"" ], "body-sm": [ "\"VT323, monospace\"" ], "headline-lg": [ "\"Press Start 2P, monospace\"" ], "label-code": [ "\"DotGothic16, monospace\"" ], "headline-md": [ "\"Silkscreen, monospace\"" ], "label-badge": [ "\"Silkscreen, monospace\"" ], "headline-sm": [ "\"Silkscreen, monospace\"" ], "display-hero": [ "\"Press Start 2P, monospace\"" ], "body-lg": [ "\"VT323, monospace\"" ], "body-md": [ "\"VT323, monospace\"" ] }, "fontSize": { "display-hero-mobile": [ "16px", { "lineHeight": "26px", "letterSpacing": "0.04em", "fontWeight": "400" } ], "body-sm": [ "16px", { "lineHeight": "22px", "fontWeight": "400" } ], "headline-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "0.02em", "fontWeight": "400" } ], "label-code": [ "13px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-md": [ "16px", { "lineHeight": "24px", "fontWeight": "700" } ], "label-badge": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" } ], "headline-sm": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "display-hero": [ "24px", { "lineHeight": "36px", "letterSpacing": "0.05em", "fontWeight": "400" } ], "body-lg": [ "20px", { "lineHeight": "26px", "fontWeight": "400" } ], "body-md": [ "18px", { "lineHeight": "24px", "fontWeight": "400" } ] } } } };</script></head><body class="bg-[#f4f5f0] font-body-md text-body-md text-[#12121c] antialiased selection:bg-[#008a7a] selection:text-white"><div class="crt-overlay"></div><header class="fixed top-0 left-0 right-0 z-50 bg-[#ffffff] border-b-4 border-[#1a1a24] shadow-[0_4px_0_#1a1a24]"><div class="h-16 max-w-[1120px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="Bagja Satrio Pixel Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U4sLJxO9hkWRoKkCz4DdIwU7zxAFDtS8wzX81kbvgD0PgwNzdFCM4EudUhHUh71dkbbyFQa41BRCy8IHn4SerKkB-R6xKMXlXvQtQt2Zi8YZSUaY7vrXoHdqJXDYsbD43yiXJ2LVLXvGa7t76ZE7jF2Q834rO2Vmo1sIiT3lc3UggE7HmZP_8coM3BYft6bGcuL9q1VfLvvljknrt5R8XqnSNRD3CsHScuziTbURLxUvfjMFMslgj-OA"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-[#008a7a] uppercase tracking-wider font-bold">M. BAGJA SATRIO</span><span class="font-label-code text-label-code text-[#4a4f5c] hidden sm:inline font-semibold">DEV.LEVEL_99 // FULLSTACK</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-md border-2 border-[#1a1a24] bg-[#f0f2ea] px-space-sm py-space-xs pixel-border-sm"><span class="font-label-code text-label-code text-[#b36b00] uppercase font-bold" id="header-hiscore">HI-SCORE: 999990</span><span class="text-[#1a1a24] font-label-code text-label-code">|</span><span class="font-label-code text-label-code text-[#008a7a] uppercase font-bold" id="header-credit">CREDIT: 01</span></div><button class="pixel-btn hidden sm:flex items-center gap-space-xs bg-[#ffffff] text-[#12121c] border-2 border-[#1a1a24] hover:bg-[#008a7a] hover:text-white px-space-sm py-space-xs font-label-badge text-label-badge uppercase pixel-border-sm transition-none" id="sfx-toggle-btn" onclick="toggleSfx()" type="button"><span class="material-symbols-outlined text-[14px]" id="sfx-icon">volume_up</span><span id="sfx-label">SFX: ON</span></button><div class="w-8 h-8 bg-[#008a7a] border-2 border-[#1a1a24] flex items-center justify-center pixel-border-sm"><span class="material-symbols-outlined text-white text-[18px]">person</span></div></div></div></header><aside class="hidden lg:flex fixed right-6 top-1/2 -translate-y-1/2 z-40 flex-col gap-space-xs bg-[#ffffff] border-4 border-[#1a1a24] p-space-sm pixel-border"><div class="font-label-badge text-label-badge text-[#008a7a] px-space-xs py-space-xs border-b-2 border-[#1a1a24] mb-space-xs text-center uppercase font-bold">HUD MAP</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-[#008a7a] text-white font-bold border-l-4 border-[#1a1a24]"><a aria-current="page" class="px-space-sm py-space-xs uppercase transition-none bg-[#008a7a] text-white font-bold border-l-4 border-[#1a1a24]" data-path="boot" href="#boot">01: BOOT</a><a class="px-space-sm py-space-xs text-[#4a4f5c] hover:bg-[#eaece4] hover:text-[#008a7a] font-headline-sm text-headline-sm uppercase transition-none" data-path="stats" href="#stats">02: STATS</a><a class="px-space-sm py-space-xs text-[#4a4f5c] hover:bg-[#eaece4] hover:text-[#008a7a] font-headline-sm text-headline-sm uppercase transition-none" data-path="quests" href="#quests">03: QUESTS</a><a class="px-space-sm py-space-xs text-[#4a4f5c] hover:bg-[#eaece4] hover:text-[#008a7a] font-headline-sm text-headline-sm uppercase transition-none" data-path="projects" href="#projects">04: PROJECTS</a><a class="px-space-sm py-space-xs text-[#4a4f5c] hover:bg-[#eaece4] hover:text-[#008a7a] font-headline-sm text-headline-sm uppercase transition-none" data-path="trophies" href="#trophies">05: TROPHIES</a><a class="px-space-sm py-space-xs text-[#4a4f5c] hover:bg-[#eaece4] hover:text-[#008a7a] font-headline-sm text-headline-sm uppercase transition-none" data-path="save" href="#save">06: SAVE</a></nav></aside><nav class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#ffffff] border-t-4 border-[#1a1a24] flex items-center justify-around px-space-xs py-space-sm" data-active-classes="bg-[#008a7a] text-white font-bold"><a aria-current="page" class="py-space-xs px-space-xs uppercase bg-[#008a7a] text-white font-bold text-xs" data-path="boot" href="#boot">BOOT</a><a class="text-[#4a4f5c] font-label-badge text-label-badge py-space-xs px-space-xs uppercase" data-path="stats" href="#stats">STATS</a><a class="text-[#4a4f5c] font-label-badge text-label-badge py-space-xs px-space-xs uppercase" data-path="quests" href="#quests">QUESTS</a><a class="text-[#4a4f5c] font-label-badge text-label-badge py-space-xs px-space-xs uppercase" data-path="projects" href="#projects">PROJ</a><a class="text-[#4a4f5c] font-label-badge text-label-badge py-space-xs px-space-xs uppercase" data-path="trophies" href="#trophies">TROPHY</a><a class="text-[#4a4f5c] font-label-badge text-label-badge py-space-xs px-space-xs uppercase" data-path="save" href="#save">SAVE</a></nav><main class="w-full pt-16 pb-16 lg:pb-0 bg-[#f4f5f0]"><div class="flex flex-col w-full">
+<!-- SECTION 1: HERO / BOOT SEQUENCE (INTEGRATED FULL-HERO INTERACTIVE GAME ARENA - LIGHT MODE) -->
+<section class="relative w-full min-h-[85vh] lg:min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden border-b-4 border-[#1a1a24] py-space-xl px-margin-mobile lg:px-margin bg-[#f0f2ea]" id="boot">
+<!-- Full-area interactive canvas background layer -->
+<canvas class="absolute inset-0 w-full h-full block image-rendering-pixelated z-0 select-none cursor-crosshair" height="960" id="arcadeGameCanvas" width="1280"></canvas>
+<!-- Subtle retro light grid overlay -->
+<div class="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-[#f4f5f0]/70 pointer-events-none z-[1]"></div>
+<!-- Top telemetry strip inside Hero arena -->
+<div class="absolute top-3 left-4 right-4 z-20 flex flex-wrap items-center justify-between gap-2 pointer-events-none">
+<div class="flex items-center gap-2 bg-[#ffffff] px-space-sm py-1 border-2 border-[#1a1a24] pixel-border-sm pointer-events-auto">
+<span class="w-2.5 h-2.5 bg-[#008a7a] animate-ping inline-block"></span>
+<span class="text-[#008a7a] uppercase font-bold font-headline-sm text-[12px]">HERO INTERACTIVE ARENA</span>
+<span class="hidden sm:inline text-[#1a1a24]">|</span>
+<span class="hidden sm:inline text-[#b36b00] font-label-code text-[12px] font-bold" id="game-coin-counter">COINS: 00</span>
+<span class="hidden sm:inline text-[#1a1a24]">|</span>
+<span class="hidden sm:inline text-[#12121c] font-label-code text-[12px] font-bold">SCORE: <span class="text-[#b36b00]" id="game-score-val">0000</span></span>
+</div>
+<button class="pixel-btn bg-[#ffffff] hover:bg-[#b36b00] hover:text-white text-[#12121c] border-2 border-[#1a1a24] px-2.5 py-1 uppercase text-[10px] font-label-badge pixel-border-sm pointer-events-auto transition-none font-bold" id="spawn-coin-btn" type="button">
++ SPAWN COIN
+</button>
+</div>
+<!-- Centered Profile Terminal Card (Crisp White Retro Light Panel) -->
+<div class="relative z-10 w-full max-w-[920px] bg-[#ffffff] p-space-lg lg:p-space-xl pixel-border flex flex-col justify-between border-4 border-[#1a1a24] shadow-[8px_8px_0px_#1a1a24]">
+<!-- Terminal Title Bar -->
+<div class="flex items-center justify-between pb-space-sm mb-space-md border-b-2 border-[#1a1a24]">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 bg-[#c2185b] border border-[#1a1a24] inline-block"></span>
+<span class="w-3 h-3 bg-[#b36b00] border border-[#1a1a24] inline-block"></span>
+<span class="w-3 h-3 bg-[#008a7a] border border-[#1a1a24] inline-block"></span>
+<span class="font-label-badge text-label-badge text-[#4a4f5c] uppercase ml-space-xs font-bold">SYS_TERM // ARCH-64</span>
+</div>
+<span class="font-label-code text-sm text-[#008a7a] font-bold animate-pulse">BAUD: 9600_OK [LIGHT_SYS]</span>
+</div>
+<!-- Centered Profile Layout: Enlarged Avatar & Scaled Bio -->
+<div class="flex flex-col md:flex-row gap-space-lg items-center md:items-center text-center md:text-left my-space-sm">
+<!-- Retro Clean Solid Neutral Monochrome Avatar Frame -->
+<div class="flex-shrink-0 relative group">
+<div class="w-48 h-48 sm:w-56 sm:h-56 p-1 bg-[#ffffff] border-4 border-[#1a1a24] pixel-border relative mx-auto shadow-[4px_4px_0px_#1a1a24]">
+<img alt="Muhammad Bagja Satrio Pixel Avatar" class="w-full h-full object-cover bg-[#eaece4] block" src="https://lh3.googleusercontent.com/aida/AEtjO1VdqRHCO88AzzFP46qcIKM6tbTa8R9MCHARgMF7Zva6Z529jJ-1CgAumneyNZyEwdlwRQvILFNpiDqMjuZ7v1eJcGzQjqzDAAzBAU6r4BW49olKUdvp--0Wr1KBD_ENK1rgPRpOPNHtTVwJ7dde4HWDO8EMcEQ72RRy85lVROfycY-b7PziLlIzDuxSKQC2sxvI7wQjGowQNc8Rl4qSiF9J7XiQuSOP0O3adOqkta-oUbJRKQnrIfm8Bi8"/>
+</div>
+<div class="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#ffffff] border-2 border-[#1a1a24] px-3 py-0.5 text-[11px] font-label-badge text-[#008a7a] font-bold uppercase shadow-[2px_2px_0px_#1a1a24]">
+● STATUS: ONLINE
+</div>
+</div>
+<!-- Scaled-up Boot Log Content -->
+<div class="font-body-lg text-[#12121c] leading-relaxed flex-1 flex flex-col justify-center items-center md:items-start gap-1">
+<p class="text-[#008a7a] text-base sm:text-lg font-bold" id="boot-line-1">&gt; INITIALIZING SYSTEM...</p>
+<p class="text-[#12121c] text-lg sm:text-[22px] font-headline-sm font-bold" id="boot-line-2">&gt; LOADING PROFILE: <span class="text-[#c2185b] font-bold">MUHAMMAD BAGJA SATRIO</span></p>
+<p class="text-[#008a7a] text-base sm:text-lg font-headline-sm font-bold" id="boot-line-3">&gt; CLASS: FULL-STACK DEV &amp; AI ENTHUSIAST</p>
+<p class="text-[#b36b00] text-base sm:text-lg font-bold" id="boot-line-4">&gt; STATUS: READY FOR ADVENTURE<span class="inline-block w-2.5 h-4 bg-[#008a7a] ml-1 animate-pulse"></span></p>
+<div class="flex flex-wrap items-center gap-space-sm mt-3 justify-center md:justify-start">
+<span class="font-label-badge text-label-badge text-[#12121c] bg-[#f0f2ea] px-2 py-1 border-2 border-[#1a1a24] font-bold">LVL 99</span>
+<span class="font-label-badge text-label-badge text-[#c2185b] bg-[#f0f2ea] px-2 py-1 border-2 border-[#1a1a24] font-bold">HP: 100/100</span>
+<span class="font-label-badge text-label-badge text-[#008a7a] bg-[#f0f2ea] px-2 py-1 border-2 border-[#1a1a24] font-bold">MP: 95/100</span>
+</div>
+</div>
+</div>
+<!-- Actions Footer: Proportional Scaled-up Buttons -->
+<div class="pt-space-md mt-space-md border-t-2 border-[#1a1a24] flex flex-wrap gap-space-md items-center justify-center md:justify-between">
+<a class="pixel-btn inline-flex items-center gap-space-sm bg-[#008a7a] text-white px-space-lg py-space-sm font-headline-md text-headline-md uppercase tracking-wider pixel-border font-bold border-2 border-[#1a1a24]" href="#stats" id="press-start-btn">
+<span class="material-symbols-outlined text-[24px]">sports_esports</span>
+<span>[ PRESS START ]</span>
+</a>
+<div class="flex items-center gap-space-sm">
+<a class="pixel-btn bg-[#ffffff] hover:bg-[#008a7a] hover:text-white text-[#12121c] px-space-md py-space-sm font-label-badge text-headline-sm uppercase pixel-border border-2 border-[#1a1a24] inline-flex items-center gap-1.5 font-bold transition-none" href="https://github.com/bagjasatrio" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>GIT: /bagjasatrio</span>
+</a>
+<a class="pixel-btn bg-[#ffffff] hover:bg-[#c2185b] hover:text-white text-[#12121c] px-space-md py-space-sm font-label-badge text-headline-sm uppercase pixel-border border-2 border-[#1a1a24] inline-flex items-center gap-1.5 font-bold transition-none" href="https://linkedin.com/in/muhammadbagjasatrio" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+<span>IN: /bagjasatrio</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Bottom Retro Guide Banner & Mobile D-Pad Controls -->
+<div class="absolute bottom-3 left-4 right-4 z-20 flex flex-wrap items-center justify-between gap-2 pointer-events-none">
+<!-- Retro Keyboard Navigation Prompt -->
+<div class="bg-[#ffffff] border-2 border-[#1a1a24] px-3 py-1 text-[11px] font-label-badge text-[#12121c] pixel-border-sm flex items-center gap-2 pointer-events-auto font-bold">
+<span class="material-symbols-outlined text-[16px] text-[#b36b00]">videogame_asset</span>
+<span>[ WASD / ARROWS ] Gerakkan karakter mengelilingi profil &amp; kumpulkan koin</span>
+</div>
+<!-- Mobile Touch D-Pad Overlay -->
+<div class="flex items-center gap-1 bg-[#ffffff] p-1 border-2 border-[#1a1a24] pixel-border-sm pointer-events-auto">
+<button aria-label="Move Up" class="pixel-btn w-7 h-7 bg-[#f0f2ea] hover:bg-[#008a7a] hover:text-white text-[#12121c] border-2 border-[#1a1a24] font-bold text-[11px] flex items-center justify-center active:scale-95" id="btn-dpad-up" type="button">▲</button>
+<button aria-label="Move Left" class="pixel-btn w-7 h-7 bg-[#f0f2ea] hover:bg-[#008a7a] hover:text-white text-[#12121c] border-2 border-[#1a1a24] font-bold text-[11px] flex items-center justify-center active:scale-95" id="btn-dpad-left" type="button">◀</button>
+<button aria-label="Move Down" class="pixel-btn w-7 h-7 bg-[#f0f2ea] hover:bg-[#008a7a] hover:text-white text-[#12121c] border-2 border-[#1a1a24] font-bold text-[11px] flex items-center justify-center active:scale-95" id="btn-dpad-down" type="button">▼</button>
+<button aria-label="Move Right" class="pixel-btn w-7 h-7 bg-[#f0f2ea] hover:bg-[#008a7a] hover:text-white text-[#12121c] border-2 border-[#1a1a24] font-bold text-[11px] flex items-center justify-center active:scale-95" id="btn-dpad-right" type="button">▶</button>
+</div>
+</div>
+</section>
+<!-- SECTION 2: PLAYER STATS (#stats) -->
+<section class="w-full max-w-[1120px] mx-auto px-margin-mobile lg:px-margin py-space-xl flex flex-col gap-space-lg" id="stats">
+<!-- Header Banner -->
+<div class="flex items-center justify-between border-b-4 border-[#1a1a24] pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-4 h-4 bg-[#008a7a] border-2 border-[#1a1a24]"></span>
+<h2 class="font-headline-lg text-headline-lg text-[#12121c] uppercase font-bold">02 // PLAYER STATS &amp; ATTRIBUTES</h2>
+</div>
+<span class="font-label-badge text-label-badge text-white bg-[#008a7a] px-space-sm py-space-xs border-2 border-[#1a1a24] pixel-border-sm font-bold">LVL.24 SORCERER</span>
+</div>
+<!-- Layout: RPG Dashboard -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Bio Summary + RPG Character Sheet -->
+<div class="lg:col-span-5 bg-[#ffffff] p-space-md lg:p-space-lg pixel-border border-4 border-[#1a1a24] flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="font-headline-sm text-headline-sm text-[#b36b00] uppercase flex items-center gap-space-xs font-bold">
+<span class="material-symbols-outlined text-[18px]">account_circle</span>
+<span>CHARACTER PROFILE</span>
+</div>
+<p class="font-body-md text-body-md text-[#2a2a38] leading-relaxed font-medium">
+            Fresh graduate Teknik Informatika Universitas Dian Nuswantoro. Berfokus pada arsitektur web modern, Artificial Intelligence, dan otomasi DevOps. Mengembangkan solusi perangkat lunak yang scalable, resilient, dan dirancang presisi hingga level performa puncak.
+          </p>
+</div>
+<!-- RPG Attributes Matrix -->
+<div class="bg-[#f0f2ea] p-space-sm border-2 border-[#1a1a24] flex flex-col gap-space-xs">
+<div class="flex justify-between font-label-code text-label-code">
+<span class="text-[#4a4f5c] font-bold">LEVEL:</span>
+<span class="text-[#12121c] font-bold">24 (MAX GRADE)</span>
+</div>
+<div class="flex justify-between font-label-code text-label-code">
+<span class="text-[#4a4f5c] font-bold">CLASS ARCHETYPE:</span>
+<span class="text-[#008a7a] font-bold">FULL-STACK SORCERER</span>
+</div>
+<div class="flex justify-between font-label-code text-label-code">
+<span class="text-[#4a4f5c] font-bold">EXPERIENCE (EXP):</span>
+<span class="text-[#b36b00] font-bold">9,800 / 10,000 XP</span>
+</div>
+<div class="flex justify-between font-label-code text-label-code">
+<span class="text-[#4a4f5c] font-bold">HEALTH POINTS (HP):</span>
+<span class="text-[#c2185b] font-bold">100 / 100</span>
+</div>
+<div class="flex justify-between font-label-code text-label-code">
+<span class="text-[#4a4f5c] font-bold">MANA POINTS (MP):</span>
+<span class="text-[#008a7a] font-bold">95 / 100</span>
+</div>
+</div>
+<div class="text-[#4a4f5c] font-label-code text-label-code flex items-center gap-space-xs font-bold">
+<span class="material-symbols-outlined text-[#b36b00] text-[16px]">verified</span>
+<span>LOCATION: SEMARANG / INDONESIA (WIB)</span>
+</div>
+</div>
+<!-- Stepped RPG Skill Bars -->
+<div class="lg:col-span-7 bg-[#ffffff] p-space-md lg:p-space-lg pixel-border border-4 border-[#1a1a24] flex flex-col justify-between gap-space-md">
+<div class="flex items-center justify-between border-b-2 border-[#1a1a24] pb-2">
+<span class="font-headline-sm text-headline-sm text-[#008a7a] uppercase font-bold">SKILL PROGRESSION TREE</span>
+<span class="font-label-badge text-label-badge text-[#4a4f5c] uppercase font-bold">STEPPED(10)</span>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Skill 1 -->
+<div class="flex flex-col gap-space-xs group cursor-help" title="HTML5, CSS3, Modern JavaScript, React.js, Tailwind">
+<div class="flex justify-between font-label-code text-label-code font-bold">
+<span class="text-[#12121c] group-hover:text-[#008a7a]">FRONTEND WEB DEVELOPMENT</span>
+<span class="text-[#008a7a] font-bold">80% // LVL 80</span>
+</div>
+<div class="h-5 w-full bg-[#eaece4] border-2 border-[#1a1a24] p-[2px]">
+<div class="h-full bg-[#008a7a]" style="width: 80%; background-image: repeating-linear-gradient(90deg, transparent 0px, transparent 6px, #ffffff 6px, #ffffff 8px);"></div>
+</div>
+<span class="font-label-badge text-label-badge text-[#4a4f5c] font-bold">TECH: HTML5 • CSS3 • JAVASCRIPT • REACT • TAILWIND</span>
+</div>
+<!-- Skill 2 -->
+<div class="flex flex-col gap-space-xs group cursor-help" title="Node.js, Express, REST APIs, Microservices, Auth">
+<div class="flex justify-between font-label-code text-label-code font-bold">
+<span class="text-[#12121c] group-hover:text-[#1565c0]">BACKEND &amp; API INTEGRATION</span>
+<span class="text-[#1565c0] font-bold">70% // LVL 70</span>
+</div>
+<div class="h-5 w-full bg-[#eaece4] border-2 border-[#1a1a24] p-[2px]">
+<div class="h-full bg-[#1565c0]" style="width: 70%; background-image: repeating-linear-gradient(90deg, transparent 0px, transparent 6px, #ffffff 6px, #ffffff 8px);"></div>
+</div>
+<span class="font-label-badge text-label-badge text-[#4a4f5c] font-bold">TECH: NODE.JS • EXPRESS • REST APIS • WEBHOOKS • AUTH</span>
+</div>
+<!-- Skill 3 -->
+<div class="flex flex-col gap-space-xs group cursor-help" title="Python, PyTorch, Scikit-learn, Flask, EDA, Predictive ML">
+<div class="flex justify-between font-label-code text-label-code font-bold">
+<span class="text-[#12121c] group-hover:text-[#b36b00]">AI &amp; DATA SCIENCE</span>
+<span class="text-[#b36b00] font-bold">75% // LVL 75</span>
+</div>
+<div class="h-5 w-full bg-[#eaece4] border-2 border-[#1a1a24] p-[2px]">
+<div class="h-full bg-[#b36b00]" style="width: 75%; background-image: repeating-linear-gradient(90deg, transparent 0px, transparent 6px, #ffffff 6px, #ffffff 8px);"></div>
+</div>
+<span class="font-label-badge text-label-badge text-[#4a4f5c] font-bold">TECH: PYTHON • PYTORCH • FLASK • SCIKIT-LEARN • PANDAS</span>
+</div>
+<!-- Skill 4 -->
+<div class="flex flex-col gap-space-xs group cursor-help" title="Docker, CI/CD Pipelines, GitHub Actions, Linux">
+<div class="flex justify-between font-label-code text-label-code font-bold">
+<span class="text-[#12121c] group-hover:text-[#c2185b]">DEVOPS &amp; CI/CD</span>
+<span class="text-[#c2185b] font-bold">60% // LVL 60</span>
+</div>
+<div class="h-5 w-full bg-[#eaece4] border-2 border-[#1a1a24] p-[2px]">
+<div class="h-full bg-[#c2185b]" style="width: 60%; background-image: repeating-linear-gradient(90deg, transparent 0px, transparent 6px, #ffffff 6px, #ffffff 8px);"></div>
+</div>
+<span class="font-label-badge text-label-badge text-[#4a4f5c] font-bold">TECH: DOCKER • GITHUB ACTIONS • CI/CD • LINUX • GIT</span>
+</div>
+<!-- Skill 5 -->
+<div class="flex flex-col gap-space-xs group cursor-help" title="PostgreSQL, MongoDB, MySQL, Redis, Schema Design">
+<div class="flex justify-between font-label-code text-label-code font-bold">
+<span class="text-[#12121c] group-hover:text-[#008a7a]">DATABASE &amp; SYSTEMS</span>
+<span class="text-[#008a7a] font-bold">70% // LVL 70</span>
+</div>
+<div class="h-5 w-full bg-[#eaece4] border-2 border-[#1a1a24] p-[2px]">
+<div class="h-full bg-[#008a7a]" style="width: 70%; background-image: repeating-linear-gradient(90deg, transparent 0px, transparent 6px, #ffffff 6px, #ffffff 8px);"></div>
+</div>
+<span class="font-label-badge text-label-badge text-[#4a4f5c] font-bold">TECH: POSTGRESQL • MYSQL • MONGODB • QUERY TUNING</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: QUEST LOG (#quests) -->
+<section class="w-full max-w-[1120px] mx-auto px-margin-mobile lg:px-margin py-space-xl flex flex-col gap-space-lg" id="quests">
+<div class="flex items-center justify-between border-b-4 border-[#1a1a24] pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-4 h-4 bg-[#b36b00] border-2 border-[#1a1a24]"></span>
+<h2 class="font-headline-lg text-headline-lg text-[#12121c] uppercase font-bold">03 // QUEST LOG (EXPERIENCE &amp; LORE)</h2>
+</div>
+<span class="font-label-badge text-label-badge text-white bg-[#b36b00] px-space-sm py-space-xs border-2 border-[#1a1a24] pixel-border-sm font-bold">CAMPAIGN HIST</span>
+</div>
+<!-- Quests Container -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Main Quest (Featured Work Experience) -->
+<div class="lg:col-span-7 bg-[#ffffff] p-space-md lg:p-space-lg pixel-border border-4 border-[#1a1a24] flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-[#008a7a] uppercase font-bold">[ MAIN QUEST CLEARED ]</span>
+<span class="font-label-code text-label-code text-[#b36b00] border-2 border-[#1a1a24] bg-[#f0f2ea] px-space-xs font-bold">2025-07 — 2025-08</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-[#12121c] mt-space-xs font-bold">Frontend Website Developer</h3>
+<div class="font-label-code text-label-code text-[#008a7a] font-bold">
+            Dinas Komunikasi, Informatika, Statistik dan Persandian Kota Semarang
+          </div>
+<div class="bg-[#f0f2ea] p-space-sm border-2 border-[#1a1a24] my-space-sm flex flex-col gap-space-xs font-body-md text-body-md text-[#2a2a38]">
+<p>&gt; Mengembangkan antarmuka website Dinas Pemadam Kebakaran Kota Semarang secara modular dan responsif.</p>
+<p>&gt; Mengintegrasikan RESTful API untuk pemantauan data pos pemadam dan transmisi status kedaruratan real-time.</p>
+<p>&gt; Memastikan responsivitas UI 100% pada perangkat mobile warga dan desktop ruang komando.</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm border-t-2 border-[#1a1a24] font-label-badge text-label-badge text-[#4a4f5c] font-bold">
+<span>REWARD: +2,500 EXP</span>
+<span class="text-[#008a7a]">STATUS: MISSION ACCOMPLISHED</span>
+</div>
+</div>
+<!-- Side Quests (Education Track) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Education 1 -->
+<div class="bg-[#ffffff] p-space-md pixel-border border-4 border-[#1a1a24] flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-[#c2185b] uppercase font-bold">[ SIDE QUEST #01 ]</span>
+<span class="font-label-badge text-label-badge text-[#008a7a] bg-[#f0f2ea] border-2 border-[#1a1a24] px-space-xs font-bold">[ CLEARED ]</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-[#12121c] font-bold">S1 Teknik Informatika</h4>
+<div class="font-label-code text-label-code text-[#4a4f5c] font-semibold">Universitas Dian Nuswantoro (UDINUS)</div>
+<div class="font-label-code text-label-code text-[#b36b00] font-bold">PERIODE: 2022 — 2026 • GPA: 3.29 / 4.00</div>
+<p class="font-body-sm text-body-sm text-[#2a2a38] mt-space-xs">
+              Fokus kurikulum: Struktur Data, Rekayasa Perangkat Lunak, Deep Learning, dan Cloud Microservices.
+            </p>
+</div>
+</div>
+<!-- Education 2 -->
+<div class="bg-[#ffffff] p-space-md pixel-border border-4 border-[#1a1a24] flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-[#c2185b] uppercase font-bold">[ SIDE QUEST #02 ]</span>
+<span class="font-label-badge text-label-badge text-[#008a7a] bg-[#f0f2ea] border-2 border-[#1a1a24] px-space-xs font-bold">[ CLEARED ]</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-[#12121c] font-bold">SMA Jurusan MIPA</h4>
+<div class="font-label-code text-label-code text-[#4a4f5c] font-semibold">SMAN 2 Brebes</div>
+<div class="font-label-code text-label-code text-[#b36b00] font-bold">PERIODE: 2019 — 2022 • NILAI AKHIR: 81.43</div>
+<p class="font-body-sm text-body-sm text-[#2a2a38] mt-space-xs">
+              Pondasi kuat sains terapan, logika analitik, dan pemrograman algoritmik dasar.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: PROJECTS (#projects) -->
+<section class="w-full max-w-[1120px] mx-auto px-margin-mobile lg:px-margin py-space-xl flex flex-col gap-space-lg" id="projects">
+<div class="flex items-center justify-between border-b-4 border-[#1a1a24] pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-4 h-4 bg-[#c2185b] border-2 border-[#1a1a24]"></span>
+<h2 class="font-headline-lg text-headline-lg text-[#12121c] uppercase font-bold">04 // ARSENAL (FEATURED PROJECTS)</h2>
+</div>
+<span class="font-label-badge text-label-badge text-white bg-[#c2185b] px-space-sm py-space-xs border-2 border-[#1a1a24] pixel-border-sm font-bold">4 ARTIFACTS</span>
+</div>
+<!-- Projects Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Project Card 1 -->
+<div class="bg-[#ffffff] p-space-md pixel-border border-4 border-[#1a1a24] flex flex-col justify-between group hover:border-[#008a7a] transition-none">
+<div>
+<div class="flex items-center justify-between border-b-2 border-[#1a1a24] pb-space-xs mb-space-sm">
+<span class="font-label-badge text-label-badge text-[#008a7a] font-bold">[ QUEST #01 • WEB DEV ]</span>
+<span class="font-label-badge text-label-badge text-[#008a7a] bg-[#f0f2ea] px-space-xs border-2 border-[#1a1a24] font-bold">[ LIVE ]</span>
+</div>
+<div class="w-full h-44 bg-[#eaece4] overflow-hidden border-2 border-[#1a1a24] mb-space-sm relative">
+<img class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-none" data-alt="Retro 8-bit aesthetic pixel mockup interface of an emergency civil defense fire department portal for Kota Semarang. Features deep navy and alert scarlet emergency accents, crisp geometric retro panels, and CRT monitor pixel style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ95L-EPbGOykpw65cB8lOKwApCzjStpHbMsEmzu8wySFUXFi43uM_YgtmZVr5p7JMwp1HqOk9mALG0Rb_qcIt9WTO6RxZCctGimRq4IFPjAFUd9G-rGCIrloB7UVW6yUPVlhKRSdOuEHU5RpteT4TpGBRQemS64yplMg9JoOaK-pKkuu5fqzcwO79QdLD9-dlv_36oTYRVqmKpnOswyEiTh_2t0FTyUUcq4LkwsZefRb3u2nyf5Hr"/>
+<div class="absolute bottom-1 right-1 bg-[#ffffff] font-label-badge text-label-badge text-[#008a7a] border-2 border-[#1a1a24] px-1 font-bold">PORTAL_V1</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-[#12121c] mb-space-xs font-bold">Website Dinas Pemadam Kebakaran Semarang</h3>
+<p class="font-body-md text-body-md text-[#2a2a38] leading-normal mb-space-sm font-medium">
+            Portal resmi dan perancangan ulang antarmuka tanggap darurat warga kota Semarang. Mengintegrasikan direktori posko pemadam dan portal edukasi siaga bencana.
+          </p>
+<div class="flex flex-wrap gap-space-xs mb-space-md">
+<span class="font-label-badge text-label-badge bg-[#f0f2ea] text-[#008a7a] border-2 border-[#1a1a24] px-space-xs py-space-xs font-bold">REACT</span>
+<span class="font-label-badge text-label-badge bg-[#f0f2ea] text-[#008a7a] border-2 border-[#1a1a24] px-space-xs py-space-xs font-bold">REST_API</span>
+<span class="font-label-badge text-label-badge bg-[#f0f2ea] text-[#008a7a] border-2 border-[#1a1a24] px-space-xs py-space-xs font-bold">TAILWIND</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs border-t-2 border-[#1a1a24]">
+<a class="pixel-btn flex-1 text-center bg-[#008a7a] text-white font-headline-sm text-headline-sm py-space-xs uppercase pixel-border-sm font-bold border-2 border-[#1a1a24]" href="https://github.com/bagjasatrio" rel="noopener" target="_blank">
+            [ VIEW LIVE ]
+          </a>
+<button class="pixel-btn flex-1 text-center bg-[#f0f2ea] hover:bg-[#c2185b] hover:text-white text-[#12121c] font-headline-sm text-headline-sm py-space-xs uppercase pixel-border-sm font-bold border-2 border-[#1a1a24] transition-none" onclick="openProjectModal('damkar')" type="button">
+            [ DETAILS ]
+          </button>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="bg-[#ffffff] p-space-md pixel-border border-4 border-[#1a1a24] flex flex-col justify-between group hover:border-[#b36b00] transition-none">
+<div>
+<div class="flex items-center justify-between border-b-2 border-[#1a1a24] pb-space-xs mb-space-sm">
+<span class="font-label-badge text-label-badge text-[#b36b00] font-bold">[ QUEST #02 • AI/AUTOMATION ]</span>
+<span class="font-label-badge text-label-badge text-[#b36b00] bg-[#f0f2ea] px-space-xs border-2 border-[#1a1a24] font-bold">[ LOCAL BUILD ]</span>
+</div>
+<div class="w-full h-44 bg-[#eaece4] overflow-hidden border-2 border-[#1a1a24] mb-space-sm relative">
+<img class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-none" data-alt="Dark cybernetic terminal Discord autonomous AI bot control room interface in crisp 16-bit pixel art. Fluorescent green and violet command logs, waveform spectrograms, and retro mechanical HUD elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnZp8R4kDOwUxMzNCx__nu-1LbjFwwOY6WTwvHHGVfiBD-WecZA7XiopHwjYYPZ6QfBZ8sqAfXdFGaIzmJL1mc-9IbYhlt1mhQ52en7Q9ziIL9kKYis908T-Ch4Os49o9Mazy9kMJElcSTXd34ASZLFiSk24P00BqNUrWRR6SKxAKCAmoxjFL3FJ6YXmShyr9KRWuLm9mzeHeByyMP4knCOumPKIHog3u32VI0tf8sNQE-9KUueXuv"/>
+<div class="absolute bottom-1 right-1 bg-[#ffffff] font-label-badge text-label-badge text-[#b36b00] border-2 border-[#1a1a24] px-1 font-bold">AI_CORE_02</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-[#12121c] mb-space-xs font-bold">AI Discord Autonomous Agent</h3>
+<p class="font-body-md text-body-md text-[#2a2a38] leading-normal mb-space-sm font-medium">
+            Agen otomatis Discord berbasis LLM multi-modal dengan kemampuan parsing intent via NLP, eksekusi tugas terjadwal, dan sistem retrieval knowledge base lokal.
+          </p>
+<div class="flex flex-wrap gap-space-xs mb-space-md">
+<span class="font-label-badge text-label-badge bg-[#f0f2ea] text-[#b36b00] border-2 border-[#1a1a24] px-space-xs py-space-xs font-bold">PYTHON</span>
+<span class="font-label-badge text-label-badge bg-[#f0f2ea] text-[#b36b00] border-2 border-[#1a1a24] px-space-xs py-space-xs font-bold">DISCORD.PY</span>
+<span class="font-label-badge text-label-badge bg-[#f0f2ea] text-[#b36b00] border-2 border-[#1a1a24] px-space-xs py-space-xs font-bold">LLM_CHAIN</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs border-t-2 border-[#1a1a24]">
+<a class="pixel-btn flex-1 text-center bg-[#f0f2ea] hover:bg-[#008a7a] hover:text-white text-[#12121c] font-headline-sm text-headline-sm py-space-xs uppercase pixel-border-sm font-bold border-2 border-[#1a1a24] transition-none" href="https://github.com/bagjasatrio" rel="noopener" target="_blank">
+            [ VIEW SOURCE ]
+          </a>
+<button class="pixel-btn flex-1 text-center bg-[#f0f2ea] hover:bg-[#c2185b] hover:text-white text-[#12121c] font-headline-sm text-headline-sm py-space-xs uppercase pixel-border-sm font-bold border-2 border-[#1a1a24] transition-none" onclick="openProjectModal('discord-ai')" type="button">
+            [ DETAILS ]
+          </button>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="bg-[#ffffff] p-space-md pixel-border border-4 border-[#1a1a24] flex flex-col justify-between group hover:border-[#008a7a] transition-none">
+<div>
+<div class="flex items-center justify-between border-b-2 border-[#1a1a24] pb-space-xs mb-space-sm">
+<span class="font-label-badge text-label-badge text-[#008a7a] font-bold">[ QUEST #03 • WEB DEV ]</span>
+<span class="font-label-badge text-label-badge text-[#008a7a] bg-[#f0f2ea] px-space-xs border-2 border-[#1a1a24] font-bold">[ LOCAL BUILD ]</span>
+</div>
+<div class="w-full h-44 bg-[#eaece4] overflow-hidden border-2 border-[#1a1a24] mb-space-sm relative">
+<img class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-none" data-alt="Arcade pixel architecture diagram of an enterprise cloud microservice gateway with glowing green data packets routing between Docker container nodes on an obsidian dark grid background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA7TWLOggDO-nqZSITiFvBPX_TorfDKmqqHXNN_9Uc2f4V5y1UT38noAKkXW4AuHqRpaTxLlbXvVu2pHumboNyd9NVE7g_xgl6W6XweieV9eVh76JTsG61UgaY_wdV0kBzpa8WFbxYR1Mr3cJsH2WtijftcLak8VofVgAG3dGIrC3DPP742-7OrU6VQy0Gs3vOHcfGv5N2YI0qUo40krPrY9WS8D2a1qSYzyZfCse0nrQad0Wz9pyz"/>
+<div class="absolute bottom-1 right-1 bg-[#ffffff] font-label-badge text-label-badge text-[#008a7a] border-2 border-[#1a1a24] px-1 font-bold">GATEWAY_V2</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-[#12121c] mb-space-xs font-bold">Enterprise Cloud Microservice Hub</h3>
+<p class="font-body-md text-body-md text-[#2a2a38] leading-normal mb-space-sm font-medium">
+            Gateway orkestrasi RESTful API terdistribusi dibangun dengan Node.js dan kontainerisasi Docker. Dilengkapi telemetry monitoring Prometheus dan token JWT caching.
+          </p>
+<div class="flex flex-wrap gap-space-xs mb-space-md">
+<span class="font-label-badge text-label-badge bg-[#f0f2ea] text-[#008a7a] border-2 border-[#1a1a24] px-space-xs py-space-xs font-bold">NODE.JS</span>
+<span class="font-label-badge text-label-badge bg-[#f0f2ea] text-[#008a7a] border-2 border-[#1a1a24] px-space-xs py-space-xs font-bold">DOCKER</span>
+<span class="font-label-badge text-label-badge bg-[#f0f2ea] text-[#008a7a] border-2 border-[#1a1a24] px-space-xs py-space-xs font-bold">REDIS</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs border-t-2 border-[#1a1a24]">
+<a class="pixel-btn flex-1 text-center bg-[#f0f2ea] hover:bg-[#008a7a] hover:text-white text-[#12121c] font-headline-sm text-headline-sm py-space-xs uppercase pixel-border-sm font-bold border-2 border-[#1a1a24] transition-none" href="https://github.com/bagjasatrio" rel="noopener" target="_blank">
+            [ VIEW SOURCE ]
+          </a>
+<button class="pixel-btn flex-1 text-center bg-[#f0f2ea] hover:bg-[#c2185b] hover:text-white text-[#12121c] font-headline-sm text-headline-sm py-space-xs uppercase pixel-border-sm font-bold border-2 border-[#1a1a24] transition-none" onclick="openProjectModal('microservices')" type="button">
+            [ DETAILS ]
+          </button>
+</div>
+</div>
+<!-- Project Card 4 -->
+<div class="bg-[#ffffff] p-space-md pixel-border border-4 border-[#1a1a24] flex flex-col justify-between group hover:border-[#c2185b] transition-none">
+<div>
+<div class="flex items-center justify-between border-b-2 border-[#1a1a24] pb-space-xs mb-space-sm">
+<span class="font-label-badge text-label-badge text-[#c2185b] font-bold">[ QUEST #04 • DATA SCIENCE ]</span>
+<span class="font-label-badge text-label-badge text-[#b36b00] bg-[#f0f2ea] px-space-xs border-2 border-[#1a1a24] font-bold">[ LOCAL BUILD ]</span>
+</div>
+<div class="w-full h-44 bg-[#eaece4] overflow-hidden border-2 border-[#1a1a24] mb-space-sm relative">
+<img class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-none" data-alt="Machine learning data visualization matrix represented as retro 8-bit pixel bar charts, scatter plots with neon pink centroids, and confusion matrix grid on retro terminal monitor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyLSlHJWPFp1Gh9Kj7LAidZHMrWLIYRIG8IFWMRoKDls8GnKUnQZ3AxExJ3cZMKYU5miTuOwf78q9XCuj1NPDQXSjBr_sworzhSuJMETUEhJYD7ModFvtW6JnnHYAz6qzx6FW5hFfK6INj6u9kWrkO8M8LP-BW7PSb7132aCTZUyQFFybmuctdCwtJAnjta-Edq0Vz6GvewbLYdwBj-bTcJ7lGXZjKzS8pT8UUclutPm7FSRCMi9qV"/>
+<div class="absolute bottom-1 right-1 bg-[#ffffff] font-label-badge text-label-badge text-[#c2185b] border-2 border-[#1a1a24] px-1 font-bold">ML_MODEL_V3</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-[#12121c] mb-space-xs font-bold">ML Predictive Classifier Dashboard</h3>
+<p class="font-body-md text-body-md text-[#2a2a38] leading-normal mb-space-sm font-medium">
+            Dashboard klasifikasi machine learning terawasi untuk analisis pola diagnostik prediktif. Menyediakan interface tuning hiperparameter interaktif dengan Flask &amp; Scikit-learn.
+          </p>
+<div class="flex flex-wrap gap-space-xs mb-space-md">
+<span class="font-label-badge text-label-badge bg-[#f0f2ea] text-[#c2185b] border-2 border-[#1a1a24] px-space-xs py-space-xs font-bold">FLASK</span>
+<span class="font-label-badge text-label-badge bg-[#f0f2ea] text-[#c2185b] border-2 border-[#1a1a24] px-space-xs py-space-xs font-bold">SCIKIT_LEARN</span>
+<span class="font-label-badge text-label-badge bg-[#f0f2ea] text-[#c2185b] border-2 border-[#1a1a24] px-space-xs py-space-xs font-bold">CHARTS</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs border-t-2 border-[#1a1a24]">
+<a class="pixel-btn flex-1 text-center bg-[#f0f2ea] hover:bg-[#008a7a] hover:text-white text-[#12121c] font-headline-sm text-headline-sm py-space-xs uppercase pixel-border-sm font-bold border-2 border-[#1a1a24] transition-none" href="https://github.com/bagjasatrio" rel="noopener" target="_blank">
+            [ VIEW SOURCE ]
+          </a>
+<button class="pixel-btn flex-1 text-center bg-[#f0f2ea] hover:bg-[#c2185b] hover:text-white text-[#12121c] font-headline-sm text-headline-sm py-space-xs uppercase pixel-border-sm font-bold border-2 border-[#1a1a24] transition-none" onclick="openProjectModal('ml-classifier')" type="button">
+            [ DETAILS ]
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: TROPHY ROOM (#trophies) -->
+<section class="w-full max-w-[1120px] mx-auto px-margin-mobile lg:px-margin py-space-xl flex flex-col gap-space-lg" id="trophies">
+<div class="flex items-center justify-between border-b-4 border-[#1a1a24] pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-4 h-4 bg-[#b36b00] border-2 border-[#1a1a24]"></span>
+<h2 class="font-headline-lg text-headline-lg text-[#12121c] uppercase font-bold">05 // TROPHY ROOM (IBM VERIFIED CREDENTIALS)</h2>
+</div>
+<span class="font-label-badge text-label-badge text-white bg-[#b36b00] px-space-sm py-space-xs border-2 border-[#1a1a24] pixel-border-sm font-bold">12 TROPHIES</span>
+</div>
+<!-- Category 1: AI & Machine Learning Badges -->
+<div class="flex flex-col gap-space-sm">
+<div class="font-headline-sm text-headline-sm text-[#008a7a] uppercase flex items-center gap-space-xs font-bold">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+<span>CATEGORY 01: ARTIFICIAL INTELLIGENCE &amp; DATA SCIENCE</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Badge 1 -->
+<div class="bg-[#ffffff] p-space-sm border-2 border-[#1a1a24] pixel-border-sm hover:border-[#008a7a] transition-none flex flex-col justify-between group">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 bg-[#f0f2ea] flex-shrink-0 flex items-center justify-center border-2 border-[#1a1a24]">
+<span class="material-symbols-outlined text-[#b36b00] text-[22px]">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-[#b36b00] uppercase font-bold">[ IBM VERIFIED ]</span>
+<h4 class="font-headline-sm text-headline-sm text-[#12121c] group-hover:text-[#008a7a] leading-tight font-bold">Developing AI Applications with Python &amp; Flask</h4>
+<span class="font-label-code text-label-code text-[#4a4f5c] font-semibold">ISSUED: MEI 2026</span>
+</div>
+</div>
+<a class="pixel-btn mt-space-sm text-center bg-[#f0f2ea] hover:bg-[#b36b00] hover:text-white font-label-badge text-label-badge py-space-xs uppercase text-[#b36b00] border-2 border-[#1a1a24] pixel-border-sm font-bold transition-none" href="https://linkedin.com/in/muhammadbagjasatrio" rel="noopener" target="_blank">
+            [ VIEW CERTIFICATE ]
+          </a>
+</div>
+<!-- Badge 2 -->
+<div class="bg-[#ffffff] p-space-sm border-2 border-[#1a1a24] pixel-border-sm hover:border-[#008a7a] transition-none flex flex-col justify-between group">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 bg-[#f0f2ea] flex-shrink-0 flex items-center justify-center border-2 border-[#1a1a24]">
+<span class="material-symbols-outlined text-[#b36b00] text-[22px]">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-[#b36b00] uppercase font-bold">[ IBM VERIFIED ]</span>
+<h4 class="font-headline-sm text-headline-sm text-[#12121c] group-hover:text-[#008a7a] leading-tight font-bold">Python for Data Science, AI &amp; Development</h4>
+<span class="font-label-code text-label-code text-[#4a4f5c] font-semibold">ISSUED: APR 2026</span>
+</div>
+</div>
+<a class="pixel-btn mt-space-sm text-center bg-[#f0f2ea] hover:bg-[#b36b00] hover:text-white font-label-badge text-label-badge py-space-xs uppercase text-[#b36b00] border-2 border-[#1a1a24] pixel-border-sm font-bold transition-none" href="https://linkedin.com/in/muhammadbagjasatrio" rel="noopener" target="_blank">
+            [ VIEW CERTIFICATE ]
+          </a>
+</div>
+<!-- Badge 3 -->
+<div class="bg-[#ffffff] p-space-sm border-2 border-[#1a1a24] pixel-border-sm hover:border-[#008a7a] transition-none flex flex-col justify-between group">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 bg-[#f0f2ea] flex-shrink-0 flex items-center justify-center border-2 border-[#1a1a24]">
+<span class="material-symbols-outlined text-[#b36b00] text-[22px]">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-[#b36b00] uppercase font-bold">[ IBM VERIFIED ]</span>
+<h4 class="font-headline-sm text-headline-sm text-[#12121c] group-hover:text-[#008a7a] leading-tight font-bold">Supervised Machine Learning: Classification</h4>
+<span class="font-label-code text-label-code text-[#4a4f5c] font-semibold">ISSUED: NOV 2025</span>
+</div>
+</div>
+<a class="pixel-btn mt-space-sm text-center bg-[#f0f2ea] hover:bg-[#b36b00] hover:text-white font-label-badge text-label-badge py-space-xs uppercase text-[#b36b00] border-2 border-[#1a1a24] pixel-border-sm font-bold transition-none" href="https://linkedin.com/in/muhammadbagjasatrio" rel="noopener" target="_blank">
+            [ VIEW CERTIFICATE ]
+          </a>
+</div>
+<!-- Badge 4 -->
+<div class="bg-[#ffffff] p-space-sm border-2 border-[#1a1a24] pixel-border-sm hover:border-[#008a7a] transition-none flex flex-col justify-between group">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 bg-[#f0f2ea] flex-shrink-0 flex items-center justify-center border-2 border-[#1a1a24]">
+<span class="material-symbols-outlined text-[#b36b00] text-[22px]">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-[#b36b00] uppercase font-bold">[ IBM VERIFIED ]</span>
+<h4 class="font-headline-sm text-headline-sm text-[#12121c] group-hover:text-[#008a7a] leading-tight font-bold">Unsupervised Machine Learning</h4>
+<span class="font-label-code text-label-code text-[#4a4f5c] font-semibold">ISSUED: NOV 2025</span>
+</div>
+</div>
+<a class="pixel-btn mt-space-sm text-center bg-[#f0f2ea] hover:bg-[#b36b00] hover:text-white font-label-badge text-label-badge py-space-xs uppercase text-[#b36b00] border-2 border-[#1a1a24] pixel-border-sm font-bold transition-none" href="https://linkedin.com/in/muhammadbagjasatrio" rel="noopener" target="_blank">
+            [ VIEW CERTIFICATE ]
+          </a>
+</div>
+<!-- Badge 5 -->
+<div class="bg-[#ffffff] p-space-sm border-2 border-[#1a1a24] pixel-border-sm hover:border-[#008a7a] transition-none flex flex-col justify-between group">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 bg-[#f0f2ea] flex-shrink-0 flex items-center justify-center border-2 border-[#1a1a24]">
+<span class="material-symbols-outlined text-[#b36b00] text-[22px]">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-[#b36b00] uppercase font-bold">[ IBM VERIFIED ]</span>
+<h4 class="font-headline-sm text-headline-sm text-[#12121c] group-hover:text-[#008a7a] leading-tight font-bold">Exploratory Data Analysis for Machine Learning</h4>
+<span class="font-label-code text-label-code text-[#4a4f5c] font-semibold">ISSUED: NOV 2025</span>
+</div>
+</div>
+<a class="pixel-btn mt-space-sm text-center bg-[#f0f2ea] hover:bg-[#b36b00] hover:text-white font-label-badge text-label-badge py-space-xs uppercase text-[#b36b00] border-2 border-[#1a1a24] pixel-border-sm font-bold transition-none" href="https://linkedin.com/in/muhammadbagjasatrio" rel="noopener" target="_blank">
+            [ VIEW CERTIFICATE ]
+          </a>
+</div>
+<!-- Badge 6 -->
+<div class="bg-[#ffffff] p-space-sm border-2 border-[#1a1a24] pixel-border-sm hover:border-[#008a7a] transition-none flex flex-col justify-between group">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 bg-[#f0f2ea] flex-shrink-0 flex items-center justify-center border-2 border-[#1a1a24]">
+<span class="material-symbols-outlined text-[#b36b00] text-[22px]">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-[#b36b00] uppercase font-bold">[ IBM VERIFIED ]</span>
+<h4 class="font-headline-sm text-headline-sm text-[#12121c] group-hover:text-[#008a7a] leading-tight font-bold">Pembelajaran Mesin Terawasi: Regresi</h4>
+<span class="font-label-code text-label-code text-[#4a4f5c] font-semibold">ISSUED: NOV 2025</span>
+</div>
+</div>
+<a class="pixel-btn mt-space-sm text-center bg-[#f0f2ea] hover:bg-[#b36b00] hover:text-white font-label-badge text-label-badge py-space-xs uppercase text-[#b36b00] border-2 border-[#1a1a24] pixel-border-sm font-bold transition-none" href="https://linkedin.com/in/muhammadbagjasatrio" rel="noopener" target="_blank">
+            [ VIEW CERTIFICATE ]
+          </a>
+</div>
+</div>
+</div>
+<!-- Category 2: DevOps, CI/CD & Software Engineering Badges -->
+<div class="flex flex-col gap-space-sm mt-space-md">
+<div class="font-headline-sm text-headline-sm text-[#c2185b] uppercase flex items-center gap-space-xs font-bold">
+<span class="material-symbols-outlined text-[18px]">deployed_code</span>
+<span>CATEGORY 02: DEVOPS, AGILE &amp; SOFTWARE ENGINEERING</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Badge 7 -->
+<div class="bg-[#ffffff] p-space-sm border-2 border-[#1a1a24] pixel-border-sm hover:border-[#c2185b] transition-none flex flex-col justify-between group">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 bg-[#f0f2ea] flex-shrink-0 flex items-center justify-center border-2 border-[#1a1a24]">
+<span class="material-symbols-outlined text-[#b36b00] text-[22px]">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-[#b36b00] uppercase font-bold">[ IBM VERIFIED ]</span>
+<h4 class="font-headline-sm text-headline-sm text-[#12121c] group-hover:text-[#c2185b] leading-tight font-bold">DevOps Capstone Project</h4>
+<span class="font-label-code text-label-code text-[#4a4f5c] font-semibold">ISSUED: MEI 2026</span>
+</div>
+</div>
+<a class="pixel-btn mt-space-sm text-center bg-[#f0f2ea] hover:bg-[#b36b00] hover:text-white font-label-badge text-label-badge py-space-xs uppercase text-[#b36b00] border-2 border-[#1a1a24] pixel-border-sm font-bold transition-none" href="https://linkedin.com/in/muhammadbagjasatrio" rel="noopener" target="_blank">
+            [ VIEW CERTIFICATE ]
+          </a>
+</div>
+<!-- Badge 8 -->
+<div class="bg-[#ffffff] p-space-sm border-2 border-[#1a1a24] pixel-border-sm hover:border-[#c2185b] transition-none flex flex-col justify-between group">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 bg-[#f0f2ea] flex-shrink-0 flex items-center justify-center border-2 border-[#1a1a24]">
+<span class="material-symbols-outlined text-[#b36b00] text-[22px]">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-[#b36b00] uppercase font-bold">[ IBM VERIFIED ]</span>
+<h4 class="font-headline-sm text-headline-sm text-[#12121c] group-hover:text-[#c2185b] leading-tight font-bold">Continuous Integration and Continuous Delivery (CI/CD)</h4>
+<span class="font-label-code text-label-code text-[#4a4f5c] font-semibold">ISSUED: MEI 2026</span>
+</div>
+</div>
+<a class="pixel-btn mt-space-sm text-center bg-[#f0f2ea] hover:bg-[#b36b00] hover:text-white font-label-badge text-label-badge py-space-xs uppercase text-[#b36b00] border-2 border-[#1a1a24] pixel-border-sm font-bold transition-none" href="https://linkedin.com/in/muhammadbagjasatrio" rel="noopener" target="_blank">
+            [ VIEW CERTIFICATE ]
+          </a>
+</div>
+<!-- Badge 9 -->
+<div class="bg-[#ffffff] p-space-sm border-2 border-[#1a1a24] pixel-border-sm hover:border-[#c2185b] transition-none flex flex-col justify-between group">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 bg-[#f0f2ea] flex-shrink-0 flex items-center justify-center border-2 border-[#1a1a24]">
+<span class="material-symbols-outlined text-[#b36b00] text-[22px]">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-[#b36b00] uppercase font-bold">[ IBM VERIFIED ]</span>
+<h4 class="font-headline-sm text-headline-sm text-[#12121c] group-hover:text-[#c2185b] leading-tight font-bold">Introduction to DevOps</h4>
+<span class="font-label-code text-label-code text-[#4a4f5c] font-semibold">ISSUED: MAR 2026</span>
+</div>
+</div>
+<a class="pixel-btn mt-space-sm text-center bg-[#f0f2ea] hover:bg-[#b36b00] hover:text-white font-label-badge text-label-badge py-space-xs uppercase text-[#b36b00] border-2 border-[#1a1a24] pixel-border-sm font-bold transition-none" href="https://linkedin.com/in/muhammadbagjasatrio" rel="noopener" target="_blank">
+            [ VIEW CERTIFICATE ]
+          </a>
+</div>
+<!-- Badge 10 -->
+<div class="bg-[#ffffff] p-space-sm border-2 border-[#1a1a24] pixel-border-sm hover:border-[#c2185b] transition-none flex flex-col justify-between group">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 bg-[#f0f2ea] flex-shrink-0 flex items-center justify-center border-2 border-[#1a1a24]">
+<span class="material-symbols-outlined text-[#b36b00] text-[22px]">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-[#b36b00] uppercase font-bold">[ IBM VERIFIED ]</span>
+<h4 class="font-headline-sm text-headline-sm text-[#12121c] group-hover:text-[#c2185b] leading-tight font-bold">Introduction to Software Engineering</h4>
+<span class="font-label-code text-label-code text-[#4a4f5c] font-semibold">ISSUED: APR 2026</span>
+</div>
+</div>
+<a class="pixel-btn mt-space-sm text-center bg-[#f0f2ea] hover:bg-[#b36b00] hover:text-white font-label-badge text-label-badge py-space-xs uppercase text-[#b36b00] border-2 border-[#1a1a24] pixel-border-sm font-bold transition-none" href="https://linkedin.com/in/muhammadbagjasatrio" rel="noopener" target="_blank">
+            [ VIEW CERTIFICATE ]
+          </a>
+</div>
+<!-- Badge 11 -->
+<div class="bg-[#ffffff] p-space-sm border-2 border-[#1a1a24] pixel-border-sm hover:border-[#c2185b] transition-none flex flex-col justify-between group">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 bg-[#f0f2ea] flex-shrink-0 flex items-center justify-center border-2 border-[#1a1a24]">
+<span class="material-symbols-outlined text-[#b36b00] text-[22px]">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-[#b36b00] uppercase font-bold">[ IBM VERIFIED ]</span>
+<h4 class="font-headline-sm text-headline-sm text-[#12121c] group-hover:text-[#c2185b] leading-tight font-bold">Introduction to Agile Development &amp; Scrum</h4>
+<span class="font-label-code text-label-code text-[#4a4f5c] font-semibold">ISSUED: APR 2026</span>
+</div>
+</div>
+<a class="pixel-btn mt-space-sm text-center bg-[#f0f2ea] hover:bg-[#b36b00] hover:text-white font-label-badge text-label-badge py-space-xs uppercase text-[#b36b00] border-2 border-[#1a1a24] pixel-border-sm font-bold transition-none" href="https://linkedin.com/in/muhammadbagjasatrio" rel="noopener" target="_blank">
+            [ VIEW CERTIFICATE ]
+          </a>
+</div>
+<!-- Badge 12 -->
+<div class="bg-[#ffffff] p-space-sm border-2 border-[#1a1a24] pixel-border-sm hover:border-[#c2185b] transition-none flex flex-col justify-between group">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 bg-[#f0f2ea] flex-shrink-0 flex items-center justify-center border-2 border-[#1a1a24]">
+<span class="material-symbols-outlined text-[#b36b00] text-[22px]">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-[#b36b00] uppercase font-bold">[ IBM VERIFIED ]</span>
+<h4 class="font-headline-sm text-headline-sm text-[#12121c] group-hover:text-[#c2185b] leading-tight font-bold">Introduction to Test &amp; Behavior Driven Development</h4>
+<span class="font-label-code text-label-code text-[#4a4f5c] font-semibold">ISSUED: APR 2026</span>
+</div>
+</div>
+<a class="pixel-btn mt-space-sm text-center bg-[#f0f2ea] hover:bg-[#b36b00] hover:text-white font-label-badge text-label-badge py-space-xs uppercase text-[#b36b00] border-2 border-[#1a1a24] pixel-border-sm font-bold transition-none" href="https://linkedin.com/in/muhammadbagjasatrio" rel="noopener" target="_blank">
+            [ VIEW CERTIFICATE ]
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: SAVE POINT (#save) -->
+<section class="w-full max-w-[1120px] mx-auto px-margin-mobile lg:px-margin py-space-xl mb-space-lg flex flex-col gap-space-lg" id="save">
+<div class="flex items-center justify-between border-b-4 border-[#1a1a24] pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-4 h-4 bg-[#008a7a] border-2 border-[#1a1a24]"></span>
+<h2 class="font-headline-lg text-headline-lg text-[#12121c] uppercase font-bold">06 // SAVE POINT &amp; TRANSMISSION CONSOLE</h2>
+</div>
+<span class="font-label-badge text-label-badge text-white bg-[#008a7a] px-space-sm py-space-xs border-2 border-[#1a1a24] pixel-border-sm font-bold">CHECKPOINT SAVED</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Terminal Contact Console -->
+<div class="lg:col-span-8 bg-[#ffffff] p-space-md lg:p-space-lg pixel-border border-4 border-[#1a1a24] flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between border-b-2 border-[#1a1a24] pb-space-xs">
+<span class="font-label-badge text-label-badge text-[#008a7a] uppercase font-bold">&gt; ESTABLISHING UPLINK TO PLAYER</span>
+<span class="font-label-code text-label-code text-[#b36b00] font-bold">LATENCY: 12ms</span>
+</div>
+<div class="font-body-lg text-body-lg text-[#12121c] flex flex-col gap-space-sm mt-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-xs bg-[#f0f2ea] p-space-sm border-2 border-[#1a1a24]">
+<div>
+<span class="text-[#008a7a] font-bold">&gt; TRANSMIT EMAIL:</span>
+<span class="text-[#12121c] ml-1 font-semibold">bagjasatrio@example.com</span>
+</div>
+<a class="pixel-btn bg-[#008a7a] text-white font-label-badge text-label-badge px-space-sm py-space-xs uppercase border-2 border-[#1a1a24] pixel-border-sm font-bold transition-none" href="mailto:bagjasatrio@example.com">
+                [ OPEN TRANSMITTER ]
+              </a>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs bg-[#f0f2ea] p-space-sm border-2 border-[#1a1a24]">
+<div>
+<span class="text-[#c2185b] font-bold">&gt; LINKEDIN LINK:</span>
+<span class="text-[#12121c] ml-1 font-semibold">/in/muhammadbagjasatrio</span>
+</div>
+<a class="pixel-btn bg-[#ffffff] hover:bg-[#c2185b] hover:text-white text-[#12121c] font-label-badge text-label-badge px-space-sm py-space-xs uppercase border-2 border-[#1a1a24] pixel-border-sm font-bold transition-none" href="https://linkedin.com/in/muhammadbagjasatrio" rel="noopener" target="_blank">
+                [ OPEN LINK ]
+              </a>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs bg-[#f0f2ea] p-space-sm border-2 border-[#1a1a24]">
+<div>
+<span class="text-[#b36b00] font-bold">&gt; GITHUB REPO:</span>
+<span class="text-[#12121c] ml-1 font-semibold">/bagjasatrio</span>
+</div>
+<a class="pixel-btn bg-[#ffffff] hover:bg-[#b36b00] hover:text-white text-[#12121c] font-label-badge text-label-badge px-space-sm py-space-xs uppercase border-2 border-[#1a1a24] pixel-border-sm font-bold transition-none" href="https://github.com/bagjasatrio" rel="noopener" target="_blank">
+                [ OPEN LINK ]
+              </a>
+</div>
+</div>
+<!-- Interactive Pseudo Command Prompt -->
+<div class="mt-space-md bg-[#f0f2ea] p-space-sm border-2 border-[#1a1a24]">
+<label class="font-label-code text-label-code text-[#4a4f5c] block mb-1 font-bold" for="console-msg">
+              &gt; SEND QUICK TELEMETRY PING (FEEDBACK / INVITATION):
+            </label>
+<div class="flex items-center gap-space-xs">
+<span class="font-body-lg text-body-lg text-[#008a7a] font-bold">&gt;</span>
+<input class="w-full bg-[#ffffff] border-2 border-[#1a1a24] px-2 py-1 outline-none font-body-lg text-body-lg text-[#12121c] placeholder:text-[#888888]" id="console-msg" placeholder="ENTER TRANSMISSION MESSAGE HERE..." type="text"/>
+<button class="pixel-btn bg-[#008a7a] text-white px-space-sm py-space-xs font-label-badge text-label-badge uppercase border-2 border-[#1a1a24] pixel-border-sm flex-shrink-0 font-bold transition-none" onclick="sendQuickPing()" type="button">
+                [ PING ]
+              </button>
+</div>
+<div class="hidden font-label-code text-label-code text-[#008a7a] mt-space-xs font-bold" id="ping-status">
+              [SYSTEM]: PACKET BROADCASTED • THANK YOU FOR CONNECTING!
+            </div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t-2 border-[#1a1a24] font-label-badge text-label-badge text-[#4a4f5c] flex items-center justify-between font-bold">
+<span>COIN STATUS: FREE PLAY</span>
+<span class="text-[#008a7a]">GAME STATE: READY FOR HIRE</span>
+</div>
+</div>
+<!-- Save Station Cartridge Card -->
+<div class="lg:col-span-4 bg-[#ffffff] p-space-md pixel-border border-4 border-[#1a1a24] flex flex-col justify-between items-center text-center">
+<div class="w-full border-b-2 border-[#1a1a24] pb-space-xs font-label-badge text-label-badge text-[#b36b00] font-bold">
+          MEMORY CARD // SLOT 01
+        </div>
+<div class="my-space-md flex flex-col items-center">
+<div class="w-24 h-28 bg-[#f0f2ea] border-4 border-[#1a1a24] flex flex-col justify-between p-2 pixel-border-sm">
+<div class="w-full h-10 bg-[#008a7a] border-2 border-[#1a1a24] flex items-center justify-center font-headline-sm text-headline-sm text-white font-bold">
+              SAVE
+            </div>
+<div class="font-label-badge text-label-badge text-[#4a4f5c] font-bold">
+              8MB • READY
+            </div>
+</div>
+<span class="font-headline-sm text-headline-sm text-[#12121c] mt-space-sm font-bold">CARTRIDGE LOCKED</span>
+<p class="font-body-sm text-body-sm text-[#4a4f5c] mt-1 font-medium">
+            Tekan [ TRANSMIT ] kapan saja untuk mengajak berkolaborasi dalam proyek software &amp; AI berikutnya.
+          </p>
+</div>
+<a class="pixel-btn w-full bg-[#f0f2ea] hover:bg-[#008a7a] hover:text-white text-[#12121c] font-headline-sm text-headline-sm py-space-xs uppercase border-2 border-[#1a1a24] pixel-border-sm font-bold transition-none" href="#boot">
+          ↑ RETURN TO BOOT
+        </a>
+</div>
+</div>
+</section>
+<!-- POPUP MODAL FOR PROJECT DETAILS -->
+<div class="fixed inset-0 z-[9998] hidden bg-[#1a1a24]/60 backdrop-none flex items-center justify-center p-space-md" id="project-modal">
+<div class="bg-[#ffffff] border-4 border-[#1a1a24] p-space-md lg:p-space-lg max-w-2xl w-full pixel-border relative max-h-[90vh] overflow-y-auto shadow-[8px_8px_0px_#1a1a24]">
+<div class="flex items-center justify-between border-b-2 border-[#1a1a24] pb-space-xs mb-space-sm">
+<span class="font-label-badge text-label-badge text-[#008a7a] uppercase font-bold" id="modal-category">[ PROJECT INTEL ]</span>
+<button class="pixel-btn bg-[#c2185b] text-white px-2 py-1 font-label-badge text-label-badge uppercase border-2 border-[#1a1a24] pixel-border-sm font-bold" onclick="closeProjectModal()" type="button">
+          [ X CLOSE ]
+        </button>
+</div>
+<h3 class="font-headline-md text-headline-md text-[#12121c] mb-space-xs font-bold" id="modal-title">Project Title</h3>
+<div class="bg-[#f0f2ea] p-space-sm border-2 border-[#1a1a24] my-space-sm font-body-md text-body-md text-[#2a2a38] leading-relaxed flex flex-col gap-space-xs">
+<div id="modal-desc">Detailed descriptions of challenges, architecture, and tech implementation will appear here.</div>
+</div>
+<div class="my-space-sm">
+<span class="font-label-badge text-label-badge text-[#b36b00] uppercase block mb-1 font-bold">TECH STACK ARCHITECTURE:</span>
+<div class="flex flex-wrap gap-space-xs" id="modal-tags">
+<!-- Dynamically populated -->
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t-2 border-[#1a1a24] flex justify-end gap-space-sm">
+<a class="pixel-btn bg-[#008a7a] text-white font-headline-sm text-headline-sm px-space-md py-space-xs uppercase border-2 border-[#1a1a24] pixel-border-sm font-bold" href="https://github.com/bagjasatrio" id="modal-source-btn" rel="noopener" target="_blank">
+          [ REPO / SOURCE ]
+        </a>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // AUDIO SYNTHESIZER USING WEB AUDIO API
+  let audioCtx = null;
+  let sfxEnabled = true;
+
+  function initAudio() {
+    if (!audioCtx) {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      if (AudioContextClass) {
+        audioCtx = new AudioContextClass();
+      }
+    }
+  }
+
+  function playTone(freq, duration, type = 'square') {
+    if (!sfxEnabled) return;
+    try {
+      initAudio();
+      if (!audioCtx) return;
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = type;
+      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + duration);
+    } catch (e) {
+      // Audio autoplay policy fallback
+    }
+  }
+
+  function playCoinSound() {
+    if (!sfxEnabled) return;
+    playTone(987.77, 0.08, 'square');
+    setTimeout(() => playTone(1318.51, 0.25, 'square'), 80);
+  }
+
+  function toggleSfx() {
+    sfxEnabled = !sfxEnabled;
+    const label = document.getElementById('sfx-label');
+    const icon = document.getElementById('sfx-icon');
+    if (label) label.textContent = sfxEnabled ? 'SFX: ON' : 'SFX: OFF';
+    if (icon) icon.textContent = sfxEnabled ? 'volume_up' : 'volume_off';
+    if (sfxEnabled) playTone(880, 0.1, 'sine');
+  }
+
+  // Interactive buttons tone trigger
+  document.querySelectorAll('button, a.pixel-btn').forEach(btn => {
+    btn.addEventListener('mouseenter', () => playTone(600, 0.04, 'square'));
+    btn.addEventListener('click', () => playCoinSound());
+  });
+
+  // FULL-HERO INTERACTIVE ARENA GAME ENGINE (LIGHT MODE)
+  const heroSection = document.getElementById('boot');
+  const gameCanvas = document.getElementById('arcadeGameCanvas');
+  let gameScore = 0;
+  let coinsCollected = 0;
+  let hiScore = 999990;
+
+  if (gameCanvas && gameCanvas.getContext) {
+    const ctx = gameCanvas.getContext('2d');
+    ctx.imageSmoothingEnabled = false;
+
+    function resizeCanvas() {
+      if (!heroSection) return;
+      const rect = heroSection.getBoundingClientRect();
+      gameCanvas.width = rect.width;
+      gameCanvas.height = rect.height;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Character state (freely roam across the full Hero background around the profile card)
+    const player = {
+      x: 80,
+      y: 120,
+      width: 28,
+      height: 32,
+      speed: 4.2,
+      facing: 1, // 1: right, -1: left
+      isMoving: false,
+      frame: 0
+    };
+
+    // Input state
+    const keys = {
+      up: false,
+      down: false,
+      left: false,
+      right: false
+    };
+
+    // Coins pool & floating text effects
+    const coins = [];
+    const floatTexts = [];
+
+    function spawnCoin() {
+      if (coins.length >= 14) return;
+      const paddingX = 40;
+      const paddingY = 60;
+      const newCoin = {
+        x: paddingX + Math.floor(Math.random() * Math.max(100, (gameCanvas.width - paddingX * 2))),
+        y: paddingY + Math.floor(Math.random() * Math.max(100, (gameCanvas.height - paddingY * 2))),
+        width: 18,
+        height: 18,
+        animFrame: Math.floor(Math.random() * 30)
+      };
+      coins.push(newCoin);
+    }
+
+    // Initial scatter of coins in hero arena
+    for (let i = 0; i < 8; i++) {
+      spawnCoin();
+    }
+
+    // Continuous Spawn interval
+    setInterval(spawnCoin, 2400);
+
+    const spawnBtn = document.getElementById('spawn-coin-btn');
+    if (spawnBtn) {
+      spawnBtn.addEventListener('click', () => {
+        spawnCoin();
+        playTone(659.25, 0.08, 'triangle');
+      });
+    }
+
+    // Keyboard Controls
+    window.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+      if (e.key === 'ArrowUp' || e.key === 'KeyW' || e.code === 'KeyW') { keys.up = true; e.preventDefault(); }
+      if (e.key === 'ArrowDown' || e.key === 'KeyS' || e.code === 'KeyS') { keys.down = true; e.preventDefault(); }
+      if (e.key === 'ArrowLeft' || e.key === 'KeyA' || e.code === 'KeyA') { keys.left = true; player.facing = -1; e.preventDefault(); }
+      if (e.key === 'ArrowRight' || e.key === 'KeyD' || e.code === 'KeyD') { keys.right = true; player.facing = 1; e.preventDefault(); }
+    });
+
+    window.addEventListener('keyup', (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+      if (e.key === 'ArrowUp' || e.key === 'KeyW' || e.code === 'KeyW') keys.up = false;
+      if (e.key === 'ArrowDown' || e.key === 'KeyS' || e.code === 'KeyS') keys.down = false;
+      if (e.key === 'ArrowLeft' || e.key === 'KeyA' || e.code === 'KeyA') keys.left = false;
+      if (e.key === 'ArrowRight' || e.key === 'KeyD' || e.code === 'KeyD') keys.right = false;
+    });
+
+    // Touch & Click D-Pad bindings
+    function bindDpad(id, dir) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const start = (ev) => {
+        ev.preventDefault();
+        keys[dir] = true;
+        if (dir === 'left') player.facing = -1;
+        if (dir === 'right') player.facing = 1;
+      };
+      const end = (ev) => {
+        ev.preventDefault();
+        keys[dir] = false;
+      };
+      el.addEventListener('mousedown', start);
+      el.addEventListener('mouseup', end);
+      el.addEventListener('mouseleave', end);
+      el.addEventListener('touchstart', start, { passive: false });
+      el.addEventListener('touchend', end);
+    }
+    bindDpad('btn-dpad-up', 'up');
+    bindDpad('btn-dpad-down', 'down');
+    bindDpad('btn-dpad-left', 'left');
+    bindDpad('btn-dpad-right', 'right');
+
+    // Click anywhere on hero background to guide character
+    gameCanvas.addEventListener('click', (e) => {
+      const rect = gameCanvas.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const clickY = e.clientY - rect.top;
+      
+      if (clickX < player.x) player.facing = -1;
+      if (clickX > player.x) player.facing = 1;
+
+      player.x += (clickX - (player.x + 14)) * 0.45;
+      player.y += (clickY - (player.y + 16)) * 0.45;
+      playTone(784, 0.08, 'triangle');
+    });
+
+    // Main Game Loop
+    function updateGame() {
+      // Movement
+      player.isMoving = false;
+      if (keys.up) { player.y -= player.speed; player.isMoving = true; }
+      if (keys.down) { player.y += player.speed; player.isMoving = true; }
+      if (keys.left) { player.x -= player.speed; player.isMoving = true; }
+      if (keys.right) { player.x += player.speed; player.isMoving = true; }
+
+      // Clamp inside full hero arena
+      player.x = Math.max(10, Math.min(gameCanvas.width - player.width - 10, player.x));
+      player.y = Math.max(10, Math.min(gameCanvas.height - player.height - 10, player.y));
+
+      player.frame++;
+
+      // Coin Pickups
+      for (let i = coins.length - 1; i >= 0; i--) {
+        const c = coins[i];
+        if (
+          player.x < c.x + c.width &&
+          player.x + player.width > c.x &&
+          player.y < c.y + c.height &&
+          player.y + player.height > c.y
+        ) {
+          coins.splice(i, 1);
+          coinsCollected++;
+          gameScore += 100;
+          hiScore += 100;
+
+          playCoinSound();
+
+          floatTexts.push({
+            text: '+100 PTS',
+            x: c.x,
+            y: c.y,
+            life: 36
+          });
+
+          const counterEl = document.getElementById('game-coin-counter');
+          if (counterEl) counterEl.textContent = `COINS: ${String(coinsCollected).padStart(2, '0')}`;
+
+          const scoreValEl = document.getElementById('game-score-val');
+          if (scoreValEl) scoreValEl.textContent = String(gameScore).padStart(4, '0');
+
+          const headerHi = document.getElementById('header-hiscore');
+          if (headerHi) headerHi.textContent = `HI-SCORE: ${hiScore}`;
+
+          const headerCredit = document.getElementById('header-credit');
+          if (headerCredit) headerCredit.textContent = `CREDIT: ${String(1 + Math.floor(coinsCollected / 3)).padStart(2, '0')}`;
+        }
+      }
+
+      renderGame();
+      requestAnimationFrame(updateGame);
+    }
+
+    function renderGame() {
+      // Light Mode Clean Arena Canvas Background
+      ctx.fillStyle = '#f0f2ea';
+      ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
+
+      // Light Gameboy/Paper Grid Pattern
+      ctx.strokeStyle = '#dcdfd5';
+      ctx.lineWidth = 1;
+      const gridSize = 32;
+      for (let x = 0; x < gameCanvas.width; x += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, gameCanvas.height);
+        ctx.stroke();
+      }
+      for (let y = 0; y < gameCanvas.height; y += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(gameCanvas.width, y);
+        ctx.stroke();
+      }
+
+      // Discrete retro map markers
+      ctx.fillStyle = 'rgba(0, 138, 122, 0.45)';
+      for (let x = 64; x < gameCanvas.width; x += 192) {
+        for (let y = 48; y < gameCanvas.height; y += 160) {
+          ctx.fillRect(x - 3, y, 7, 1);
+          ctx.fillRect(x, y - 3, 1, 7);
+        }
+      }
+
+      // Draw Golden Animated Coins (with dark outline for contrast)
+      coins.forEach(coin => {
+        coin.animFrame++;
+        const shine = Math.floor(coin.animFrame / 6) % 4;
+        const widthScale = [16, 12, 6, 12][shine];
+        const offsetX = (18 - widthScale) / 2;
+
+        // Dark retro outline
+        ctx.fillStyle = '#1a1a24';
+        ctx.fillRect(coin.x + offsetX - 1, coin.y - 1, widthScale + 2, 18);
+
+        // Core Golden fill
+        ctx.fillStyle = '#f59e0b';
+        ctx.fillRect(coin.x + offsetX, coin.y, widthScale, 16);
+
+        // Inner highlight
+        ctx.fillStyle = '#fde68a';
+        ctx.fillRect(coin.x + offsetX + 1, coin.y + 1, Math.max(1, widthScale - 2), 14);
+
+        // Sparkle
+        if (shine === 0 || shine === 1) {
+          ctx.fillStyle = '#ffffff';
+          ctx.fillRect(coin.x + offsetX + 2, coin.y + 2, 3, 3);
+        }
+      });
+
+      // Draw Pixel Sorcerer Character (Dark crisp retro outline for light background)
+      const px = Math.round(player.x);
+      const py = Math.round(player.y);
+      const bob = player.isMoving ? (Math.floor(player.frame / 4) % 2) * 2 : (Math.floor(player.frame / 14) % 2) * 1;
+      const legStep = player.isMoving ? (Math.floor(player.frame / 4) % 2) : 0;
+
+      ctx.save();
+      if (player.facing === -1) {
+        ctx.translate(px + player.width, 0);
+        ctx.scale(-1, 1);
+      } else {
+        ctx.translate(px, 0);
+      }
+
+      const drawY = py + bob;
+
+      // Dark shadow underneath
+      ctx.fillStyle = 'rgba(26, 26, 36, 0.2)';
+      ctx.fillRect(4, drawY + 30, 20, 4);
+
+      // Wizard Hat (Teal with dark outline)
+      ctx.fillStyle = '#1a1a24';
+      ctx.fillRect(7, drawY - 1, 14, 11); // Hat outline
+      ctx.fillStyle = '#008a7a';
+      ctx.fillRect(8, drawY + 0, 12, 3);
+      ctx.fillRect(6, drawY + 3, 16, 3);
+      ctx.fillRect(3, drawY + 6, 22, 3);
+
+      // Hat buckle
+      ctx.fillStyle = '#b36b00';
+      ctx.fillRect(12, drawY + 6, 4, 3);
+
+      // Face
+      ctx.fillStyle = '#1a1a24';
+      ctx.fillRect(6, drawY + 9, 16, 6);
+
+      // Glowing Eyes
+      ctx.fillStyle = '#fde68a';
+      ctx.fillRect(9, drawY + 10, 2, 3);
+      ctx.fillRect(16, drawY + 10, 2, 3);
+
+      // Robe (Magenta/Crimson with dark outline)
+      ctx.fillStyle = '#1a1a24';
+      ctx.fillRect(4, drawY + 14, 19, 14); // outline
+      ctx.fillStyle = '#c2185b';
+      ctx.fillRect(5, drawY + 15, 17, 12);
+
+      // Robe Teal Crest
+      ctx.fillStyle = '#008a7a';
+      ctx.fillRect(11, drawY + 16, 5, 8);
+
+      // Staff Handle & Gem
+      ctx.fillStyle = '#1a1a24';
+      ctx.fillRect(20, drawY + 7, 5, 22); // staff outline
+      ctx.fillStyle = '#b36b00';
+      ctx.fillRect(21, drawY + 8, 3, 20); // staff body
+      ctx.fillStyle = '#008a7a';
+      ctx.fillRect(20, drawY + 4, 5, 5); // crystal
+
+      // Magic Glow Orb
+      if (Math.floor(player.frame / 6) % 2 === 0) {
+        ctx.fillStyle = '#f59e0b';
+        ctx.fillRect(21, drawY + 1, 3, 3);
+      }
+
+      // Feet
+      ctx.fillStyle = '#1a1a24';
+      if (legStep === 0) {
+        ctx.fillRect(6, drawY + 27, 6, 4);
+        ctx.fillRect(15, drawY + 27, 6, 4);
+      } else {
+        ctx.fillRect(7, drawY + 26, 6, 4);
+        ctx.fillRect(14, drawY + 28, 6, 4);
+      }
+
+      ctx.restore();
+
+      // Floating Score Indicators
+      for (let i = floatTexts.length - 1; i >= 0; i--) {
+        const ft = floatTexts[i];
+        ctx.font = 'bold 12px monospace';
+        ctx.fillStyle = '#1a1a24';
+        ctx.fillText(ft.text, ft.x + 1, ft.y + 1); // text shadow
+        ctx.fillStyle = '#b36b00';
+        ctx.fillText(ft.text, ft.x, ft.y);
+        ft.y -= 0.9;
+        ft.life--;
+        if (ft.life <= 0) {
+          floatTexts.splice(i, 1);
+        }
+      }
+
+      // Very subtle retro light scanlines
+      ctx.fillStyle = 'rgba(0,0,0,0.025)';
+      for (let y = 0; y < gameCanvas.height; y += 3) {
+        ctx.fillRect(0, y, gameCanvas.width, 1);
+      }
+    }
+
+    requestAnimationFrame(updateGame);
+  }
+
+  // PROJECT DATA MODAL HANDLER
+  const projectDatabase = {
+    damkar: {
+      title: 'Website Dinas Pemadam Kebakaran Kota Semarang',
+      category: 'MAIN QUEST // WEB ARCHITECTURE & CITIZEN PORTAL',
+      desc: 'Proyek revitalisasi antarmuka portal kebencanaan dan darurat Kota Semarang. Dibangun dengan pendekatan Mobile-First untuk memastikan masyarakat dapat mengakses informasi pos siaga bencana tanpa hambatan latensi. Dilengkapi integrasi REST API data posko pemadam kebakaran, rute armada darurat, dan panel edukasi publik berstandar aksesibilitas tinggi.',
+      tags: ['REACT', 'REST_API', 'TAILWIND', 'GEOJSON', 'CI/CD']
+    },
+    'discord-ai': {
+      title: 'AI Discord Autonomous Agent',
+      category: 'QUEST 02 // INTELLIGENT AGENT & AUTOMATION',
+      desc: 'Agen otonom multi-thread pada ekosistem Discord dengan integrasi Large Language Models. Mengimplementasikan parsing konteks teks secara dinamis (NLP), scheduled cron routine untuk monitoring webhook server, dan sistem retrieval jawaban dari dokumen teknis lokal (RAG pipeline).',
+      tags: ['PYTHON', 'DISCORD.PY', 'LANGCHAIN', 'VECTOR_EMBEDDINGS', 'ASYNCIO']
+    },
+    microservices: {
+      title: 'Enterprise Cloud Microservice Hub',
+      category: 'QUEST 03 // DISTRIBUTED SYSTEMS & BACKEND',
+      desc: 'Arsitektur gateway orkestrasi microservice berbasis Node.js yang mengintegrasikan autentikasi JWT terpusat, rate-limiting menggunakan Redis, serta deployment container otomatis menggunakan Docker dan GitHub Actions pipeline.',
+      tags: ['NODE.JS', 'DOCKER', 'REDIS', 'EXPRESS', 'MICROSERVICES']
+    },
+    'ml-classifier': {
+      title: 'ML Predictive Classifier Dashboard',
+      category: 'QUEST 04 // MACHINE LEARNING & TELEMETRY',
+      desc: 'Platform visualisasi analisis prediktif berbasis machine learning terawasi. Dilengkapi antarmuka eksplorasi fitur data, confusion matrix dinamis, parameter tuning k-NN/Random Forest, dan API endpoint inferensi berbasis Flask.',
+      tags: ['PYTHON', 'SCIKIT-LEARN', 'FLASK', 'PANDAS', 'DATA_VIS']
+    }
+  };
+
+  function openProjectModal(key) {
+    const data = projectDatabase[key];
+    if (!data) return;
+    document.getElementById('modal-title').textContent = data.title;
+    document.getElementById('modal-category').textContent = data.category;
+    document.getElementById('modal-desc').textContent = data.desc;
+    
+    const tagsContainer = document.getElementById('modal-tags');
+    tagsContainer.innerHTML = '';
+    data.tags.forEach(tag => {
+      const span = document.createElement('span');
+      span.className = 'font-label-badge text-label-badge bg-[#f0f2ea] text-[#008a7a] px-space-xs py-space-xs border-2 border-[#1a1a24] font-bold';
+      span.textContent = tag;
+      tagsContainer.appendChild(span);
+    });
+
+    const modal = document.getElementById('project-modal');
+    modal.classList.remove('hidden');
+    playTone(523.25, 0.15, 'sawtooth');
+  }
+
+  function closeProjectModal() {
+    const modal = document.getElementById('project-modal');
+    modal.classList.add('hidden');
+    playTone(392, 0.08, 'square');
+  }
+
+  function sendQuickPing() {
+    const input = document.getElementById('console-msg');
+    const status = document.getElementById('ping-status');
+    if (input && input.value.trim().length > 0) {
+      status.classList.remove('hidden');
+      input.value = '';
+      playCoinSound();
+      setTimeout(() => {
+        status.classList.add('hidden');
+      }, 5000);
+    }
+  }
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeProjectModal();
+  });
+</script></main><footer class="w-full bg-[#ffffff] border-t-4 border-[#1a1a24] py-space-lg mb-12 lg:mb-0"><div class="max-w-[1120px] mx-auto px-margin-mobile lg:px-margin flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-[#008a7a] font-bold">© 2024</span><span class="font-body-md text-body-md text-[#12121c] font-semibold">MUHAMMAD BAGJA SATRIO. ALL RIGHTS RESERVED.</span></div><div class="font-label-code text-label-code text-[#4a4f5c] flex items-center gap-space-md font-bold"><span>SYSTEM STATUS: <span class="text-[#008a7a]">ONLINE [LIGHT_MODE]</span></span><span>INSERT COIN TO CONTINUE</span></div></div></footer>
+</body></html>

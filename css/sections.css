@@ -1,0 +1,1657 @@
+/* ==========================================================================
+   sections.css — page chrome and per-section layout
+   Portofolio Muhammad Bagja Satrio
+   ==========================================================================
+   Structure ported from the mockup's Tailwind utility soup into semantic,
+   hand-written classes. Breakpoints follow DESIGN.md section "Layout & Spacing":
+     mobile   < 640px   4-col, --margin-mobile, panels stack
+     tablet   640-1023  8-col
+     desktop  >= 1024   12-col, --margin, HUD MAP rail appears
+   ========================================================================== */
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 60;
+  background: var(--surface);
+  border-bottom: var(--border-heavy) solid var(--ink);
+  box-shadow: 0 4px 0 var(--ink);
+}
+
+/* The bar is deliberately NOT clamped to the 1120px content column that
+   .shell imposes. Everything below the header is a reading column and belongs
+   inside that column; the header is chrome, and clamping it leaves dead space
+   at both ends so the brand and the controls appear inset rather than pinned
+   to the corners. Padding takes over the job of keeping them off the edge. */
+.site-header__inner {
+  width: 100%;
+  max-width: none;
+  min-height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* nowrap on purpose: this bar must never stack. Everything inside it is
+     trimmed per breakpoint instead (see .header__right below). */
+  flex-wrap: nowrap;
+  gap: var(--space-md);
+  padding-block: var(--space-xs);
+  padding-inline: var(--margin-mobile);
+}
+
+/* Match .shell's gutter change, so the bar's edges line up with the content
+   column once the viewport is wide enough to have one. */
+@media (min-width: 1024px) {
+  .site-header__inner { padding-inline: var(--margin); }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  min-width: 0;
+}
+
+.brand__logo {
+  height: 32px;
+  width: auto;
+  flex: 0 0 auto;
+}
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.brand__name {
+  font-family: var(--font-badge);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--teal);
+  white-space: nowrap;
+}
+
+.brand__sub {
+  font-family: var(--font-code);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* The bar is the game HUD, so it has to sit above the foreground canvas.
+   The character sprite on .hero__canvas--fg is z-index 15 by design -- it has
+   to paint over the profile card -- which would otherwise walk straight over
+   the readouts and the + COIN button. */
+
+/* Right-hand cluster. This MUST stay a flex row: .header__stats is itself a
+   flex container, and flex containers are block-level, so without this rule it
+   stretches to 100% of the parent and shoves every sibling onto its own line. */
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+/* SCORE / COINS / CREDIT -- the only place the game numbers now live.
+   From 768px up this sits inside .header__right; from 1240px up it moves to the
+   centre track of the bar instead. Below 768px it is dropped entirely, since the
+   arena is decorative there and the numbers would only ever read zero. */
+.header__stats {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--surface-alt);
+  border: var(--border) solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.header__stats .readout { gap: var(--space-xs); }
+
+.header__stats .readout__label,
+.header__stats .readout__value {
+  font-family: var(--font-code);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.header__stats .readout__value--gold { color: var(--gold); }
+.header__stats .readout__value--teal { color: var(--teal); }
+
+/* Drop-a-coin button, relocated out of the hero. It never grows or shrinks --
+   it is the one control that has to stay a comfortable tap target. */
+.header__spawn {
+  flex: 0 0 auto;
+  padding: var(--space-xs) var(--space-sm);
+  font-size: 0.75rem;
+}
+
+/* Phones: shed the two least important pieces of text -- the brand subtitle and
+   the readout labels -- so the numbers and the + COIN button keep their room.
+   Dropping text beats dropping a whole component here. */
+@media (max-width: 639px) {
+  .header__right { gap: var(--space-xs); }
+  .brand__text { display: none; }
+  .header__stats .readout__label { display: none; }
+
+  /* Same treatment for the theme toggle's label. At 320px the header had only
+     a few pixels of slack once a second toggle was added, and this bar is
+     flex-wrap: nowrap -- it cannot fall back to a second line, it would
+     overflow instead. The sun / moon icon carries the meaning on its own, and
+     the button keeps its aria-label and aria-pressed, so nothing is lost to a
+     screen reader. */
+  #theme-label { display: none; }
+}
+
+/* Tablet: labels come back, so the stats box needs a little more breathing
+   room to stay readable. */
+@media (min-width: 640px) {
+  .header__right { gap: var(--space-sm); }
+  .header__stats { gap: var(--space-sm); }
+}
+
+/* Desktop: larger type and wider gaps for the right-hand cluster. The
+   three-zone treatment below is measured against these values. */
+@media (min-width: 768px) {
+  .header__right { gap: var(--space-md); }
+  .header__stats { gap: var(--space-md); }
+
+  .header__stats .readout__label,
+  .header__stats .readout__value { font-size: 0.875rem; }
+}
+
+/* Desktop: full treatment. Three zones across the bar -- brand pinned left,
+   readouts centred on the bar, controls pinned right.
+
+   Done with a three-track grid rather than absolute positioning or
+   space-between. The two 1fr side tracks are equal by construction, so the
+   middle track lands on the bar's true midpoint without any measuring -- with
+   space-between the centre element instead sits at the midpoint of the leftover
+   gap, and drifts off-centre as soon as the two sides differ in width. Grid
+   tracks also cannot overlap, so the readouts can never end up on top of the
+   + COIN button the way an absolutely-positioned centre can.
+
+   The breakpoint is 1240px because that is where the tracks actually fit,
+   measured rather than guessed. The right-hand cluster is 436px, so each 1fr
+   track needs at least that, plus the 227px centre and the two gaps -- about
+   1131px of content box, which a 1240px viewport clears once the gutters and
+   the scrollbar are taken out. Below this the bar stays two-zone: brand left,
+   everything else right. */
+@media (min-width: 1240px) {
+  .site-header__inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  /* Auto-placement puts brand / stats / controls in tracks 1 / 2 / 3 in
+     document order; these just pin each to its own edge of its track. */
+  .brand { justify-self: start; }
+  .header__stats { justify-self: center; }
+  .header__right { justify-self: end; }
+
+  /* The centre track only fits without the labels: "SCORE 0000 | COINS 00 |
+     CREDIT 01" is 373px wide labelled and 227px bare, and the bare form is what
+     lets the three zones fit at 1240px rather than much further up. The values
+     stay in the DOM, so nothing is lost -- the labels only name them. */
+  .header__stats .readout__label { display: none; }
+}
+
+.header__divider {
+  color: var(--ink);
+  font-family: var(--font-code);
+  font-size: 0.875rem;
+}
+
+/* SFX toggle. Shown at every width. On phones it stands in for the readouts,
+   which no longer change now the arena is decorative -- so the toggle is the
+   one header control that still does something there. */
+.sfx-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--surface);
+  color: var(--text);
+  border: var(--border) solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-badge);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Phones: below 768px the arena is decoration -- the character stands still
+   beside the photo and the coins frame the card rather than being collected.
+   That makes the SCORE / COINS / CREDIT readouts permanently zero, and makes
+   + COIN drop a coin nobody can pick up, so both are dropped. The SFX toggle
+   takes their place.
+
+   This is also why the toggle no longer waits until 768px: it was only ever
+   deferred because the bar could not fit it alongside the labelled readouts,
+   and those are exactly what is being removed here. */
+@media (max-width: 767px) {
+  .header__stats,
+  .header__spawn { display: none; }
+}
+
+.sfx-toggle:hover {
+  background: var(--teal);
+  color: var(--on-accent);
+}
+
+.sfx-toggle:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 var(--ink);
+}
+
+.sfx-toggle__icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* Avatar badge in the corner. */
+.header__avatar {
+  display: none;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  background: var(--teal);
+  border: var(--border) solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  color: var(--on-accent);
+}
+
+/* Deferred to 768px for the same reason as the SFX toggle. */
+@media (min-width: 768px) {
+  .header__avatar { display: flex; }
+}
+
+.header__avatar svg { width: 18px; height: 18px; }
+
+/* ==========================================================================
+   NAVIGATION — HUD MAP rail (desktop) + bottom bar (mobile)
+   ========================================================================== */
+
+.hud {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hud {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    position: fixed;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 40;
+    padding: var(--space-sm);
+    background: var(--surface);
+    border: var(--border-heavy) solid var(--ink);
+    box-shadow: var(--shadow);
+  }
+}
+
+.hud__title {
+  font-family: var(--font-badge);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--teal);
+  text-align: center;
+  padding: var(--space-xs);
+  border-bottom: var(--border) solid var(--ink);
+  margin-bottom: var(--space-xs);
+}
+
+.hud__nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.hud__link {
+  display: block;
+  padding: var(--space-xs) var(--space-sm);
+  font-family: var(--font-body);
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  line-height: 1.42;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-left: 4px solid transparent;
+}
+
+.hud__link:hover {
+  background: var(--surface-high);
+  color: var(--teal);
+}
+
+/* Active section, driven by IntersectionObserver in interactions.js. */
+.hud__link[aria-current="true"] {
+  background: var(--teal);
+  color: var(--on-accent);
+  font-weight: 700;
+  border-left-color: var(--ink);
+}
+
+/* Mobile bottom bar.
+
+   Every label shares the width evenly. The bar previously used a fixed
+   min-width: 44px per link with fixed padding and a 13px label, which at phone
+   widths left the boxes narrower than the text: measured at 393x844 the
+   longest label, "ARSENAL", needed 74px inside a 64px box and the rest
+   overflowed by 2-10px each, so the labels ran into one another. At 320px the
+   row of boxes came to 336px inside a 320px bar, which also scrolled the whole
+   page sideways because the bar is fixed and its overflow counts towards the
+   document width. flex: 1 fixes both: the links divide the bar, and a link can
+   never be squeezed below its own label. */
+.tabbar {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 40;
+  display: flex;
+  align-items: stretch;
+  gap: 4px;
+  padding: var(--space-xs);
+  background: var(--surface);
+  border-top: var(--border-heavy) solid var(--ink);
+  /* Safety net for the narrowest phones (~320px), where seven labels cannot
+     fit legibly at any size. The links stop shrinking at their own text width,
+     so past that point the bar scrolls instead of clipping a label or spilling
+     past the screen edge. The bar is fixed, so without this its overflow would
+     also widen the document and scroll the whole page sideways. The scrollbar
+     is hidden because the overflow is a fallback, not the normal state. */
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tabbar::-webkit-scrollbar { display: none; }
+
+@media (min-width: 1024px) {
+  .tabbar { display: none; }
+}
+
+.tabbar__link {
+  /* flex: 1 makes the links divide the bar evenly, and because flexbox's
+     automatic minimum is left intact the box can never end up narrower than
+     its own label. The 44px is a floor on the height only, so the touch target
+     still meets the guidance while the label keeps its full width.
+
+     11px is the smallest size at which all seven labels fit side by side; the
+     13px used before needed about 435px, which no phone has. */
+  flex: 1 1 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: var(--space-xs) 2px;
+  font-family: var(--font-badge);
+  font-size: 0.6875rem;
+  letter-spacing: 0.01em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Below 412px even 11px overruns -- that row measures 401px -- so the label
+   and the spacing around it drop one more step. That carries the row to about
+   345px, under which the bar scrolls rather than clip a label. */
+@media (max-width: 411px) {
+  .tabbar {
+    gap: 2px;
+    padding-inline: 2px;
+  }
+
+  .tabbar__link { font-size: 0.625rem; }
+}
+
+/* Once the bar has room to spare the labels go back up to the size the desktop
+   rail uses. */
+@media (min-width: 768px) {
+  .tabbar__link {
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+  }
+}
+
+.tabbar__link[aria-current="true"] {
+  background: var(--teal);
+  color: var(--on-accent);
+}
+
+/* Main content offset for the fixed header / bottom bar. */
+.main {
+  padding-top: var(--header-h);
+  padding-bottom: 4rem;
+  background: var(--bg);
+}
+
+@media (min-width: 1024px) {
+  .main { padding-bottom: 0; }
+}
+
+/* Anchor offset so the fixed header does not cover section titles. */
+:target,
+section[id] {
+  scroll-margin-top: calc(var(--header-h) + var(--space-md));
+}
+
+/* ==========================================================================
+   SECTION 1 — HERO / BOOT ARENA
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 85vh;
+  padding: var(--space-xl) var(--margin-mobile);
+  background: var(--surface-alt);
+  border-bottom: var(--border-heavy) solid var(--ink);
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    min-height: calc(100vh - var(--header-h));
+    padding-inline: var(--margin);
+  }
+}
+
+/* Canvas fills the whole arena and sits behind the profile card. */
+.hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  cursor: crosshair;
+  user-select: none;
+}
+
+/* Foreground layer carrying the character sprite.
+
+   It has to stack above the profile card (z-index 10) or the sprite
+   disappears behind the card as soon as it walks across it, but it must stay
+   under the telemetry strip (20). pointer-events is disabled so this layer
+   never intercepts clicks meant for the card's buttons or the arena's
+   drag-to-walk. */
+.hero__canvas--fg {
+  z-index: 15;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Soft light wash so the card stays legible over the busy canvas. */
+.hero__veil {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    var(--veil-top),
+    transparent 45%,
+    var(--veil-bottom)
+  );
+}
+
+
+/* --- Profile terminal card --- */
+.hero__card {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 920px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-lg);
+  background: var(--surface);
+  border: var(--border-heavy) solid var(--ink);
+  box-shadow: var(--shadow-xl);
+}
+
+@media (min-width: 1024px) {
+  .hero__card { padding: var(--space-xl); }
+}
+
+/* Terminal title bar with the three coloured dots. */
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
+  border-bottom: var(--border) solid var(--ink);
+}
+
+.terminal-bar__dots {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.terminal-bar__dot {
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--ink);
+}
+
+.terminal-bar__dot--magenta { background: var(--magenta); }
+.terminal-bar__dot--gold    { background: var(--gold); }
+.terminal-bar__dot--teal    { background: var(--teal); }
+
+.terminal-bar__title {
+  font-family: var(--font-badge);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-left: var(--space-xs);
+}
+
+.terminal-bar__meta {
+  font-family: var(--font-code);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--teal);
+  animation: blink 1.2s steps(1, end) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .terminal-bar__meta { animation: none; }
+}
+
+/* Profile row: avatar + boot log. */
+.hero__profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-block: var(--space-sm);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero__profile {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+.hero__avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.hero__avatar {
+  width: 192px;
+  height: 192px;
+  padding: 4px;
+  background: var(--surface);
+  border: var(--border-heavy) solid var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.hero__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: var(--surface-high);
+}
+
+@media (min-width: 640px) {
+  .hero__avatar { width: 224px; height: 224px; }
+}
+
+/* "STATUS: ONLINE" tab hanging off the bottom of the avatar frame. */
+.hero__status {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 2px 12px;
+  background: var(--surface);
+  border: var(--border) solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-badge);
+  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+/* Boot log lines. */
+.hero__log {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+@media (min-width: 768px) {
+  .hero__log { align-items: flex-start; }
+}
+
+.hero__log-line { margin: 0; }
+
+.hero__log-line--teal    { color: var(--teal); font-weight: 600; }
+/* The name is the hero's emphasis line. It used to be Silkscreen, but the
+   pixel face is wide with no descenders and was the one line in the log that
+   was genuinely hard to read. It now shares the body face and simply leans on
+   weight and colour to stand out. */
+.hero__log-line--name    { font-size: 1.125rem; line-height: 1.5; font-weight: 700; color: var(--text); }
+.hero__log-line--name span { color: var(--magenta); }
+.hero__log-line--class   { font-family: var(--font-body); font-size: 1rem; font-weight: 600; color: var(--teal); }
+.hero__log-line--status  { color: var(--gold); font-weight: 600; }
+
+/* Hero action footer. */
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding-top: var(--space-md);
+  margin-top: var(--space-md);
+  border-top: var(--border) solid var(--ink);
+}
+
+@media (min-width: 768px) {
+  .hero__actions { justify-content: space-between; }
+}
+
+.hero__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+/* --- Arena footer: control hints + D-pad --- */
+.hero__footer {
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
+  right: 16px;
+  z-index: 20;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  pointer-events: none;
+}
+
+.hero__footer > * { pointer-events: auto; }
+
+.hero__hint {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 4px 12px;
+  background: var(--surface);
+  border: var(--border) solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-badge);
+  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.hero__hint svg { width: 16px; height: 16px; color: var(--gold); flex: 0 0 auto; }
+
+/* The keyboard hint is noise on touch devices. */
+@media (max-width: 767px) {
+  .hero__hint { display: none; }
+}
+
+/* Below 768px the arena is decorative: the sorcerer stands still beside the
+   photo and the coins frame the card rather than being collected, so there is
+   nothing for a D-pad to drive. Hiding the whole footer also removes the
+   absolutely-positioned bar itself, which would otherwise sit empty over the
+   arena once the hint above is hidden. */
+@media (max-width: 767px) {
+  .dpad,
+  .hero__footer { display: none; }
+}
+
+/* D-pad cluster. */
+.dpad {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  background: var(--surface);
+  border: var(--border) solid var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+
+.dpad__btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  background: var(--surface-alt);
+  color: var(--text);
+  border: var(--border) solid var(--ink);
+  touch-action: none; /* stop scroll-hijack while holding a direction */
+}
+
+.dpad__btn:hover {
+  background: var(--teal);
+  color: var(--on-accent);
+}
+
+.dpad__btn:active {
+  transform: scale(0.95);
+}
+
+/* ==========================================================================
+   SECTION 2 — PLAYER STATS
+   ========================================================================== */
+
+.grid-12 {
+  display: grid;
+  /* minmax(0, 1fr) rather than 1fr: a bare 1fr is minmax(auto, 1fr), which
+     refuses to shrink below the widest child's automatic minimum size. At
+     390px that pushed the cards ~35px past the viewport and produced a 19px
+     horizontal scroll. */
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--gutter-mobile);
+}
+
+@media (min-width: 640px) {
+  .grid-12 { gap: var(--gutter); }
+}
+
+@media (min-width: 1024px) {
+  .grid-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+}
+
+.col-5 { grid-column: span 1; }
+.col-6 { grid-column: span 1; }
+.col-7 { grid-column: span 1; }
+.col-8 { grid-column: span 1; }
+.col-4 { grid-column: span 1; }
+
+@media (min-width: 1024px) {
+  .col-5 { grid-column: span 5; }
+  .col-6 { grid-column: span 6; }
+  .col-7 { grid-column: span 7; }
+  .col-8 { grid-column: span 8; }
+  .col-4 { grid-column: span 4; }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--surface);
+  border: var(--border-heavy) solid var(--ink);
+  box-shadow: var(--shadow);
+}
+
+@media (min-width: 1024px) {
+  .card { padding: var(--space-lg); }
+}
+
+.card__kicker {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-body);
+  letter-spacing: 0.02em;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.card__kicker svg { width: 18px; height: 18px; }
+
+.card__kicker--teal    { color: var(--teal); }
+
+.card__body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+/* Attribute matrix inside the character sheet. */
+.matrix {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-sm);
+  background: var(--surface-alt);
+  border: var(--border) solid var(--ink);
+}
+
+/* On phones the label and the value sat on one line with space-between, which
+   leaves the value whatever room is left over. For the two rows long enough to
+   wrap -- EDUCATION and LOCATION -- that squeezed the label to within 9px of
+   the value's first line, so the pair read as one run-on block. The fix keeps
+   the original side-by-side arrangement but stops the two from ever touching:
+   a real minimum gap, and the value allowed to shrink and wrap on the right.
+   Measured on the real page, not assumed: the same rows had 237-396px of clear
+   space at 640px, so only the narrow case needed changing. */
+@media (max-width: 639px) {
+  .matrix .readout {
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  /* The label keeps its natural width and never wraps mid-word. */
+  .matrix .readout__label {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  /* The value takes the remaining width and sits flush right, so the two form
+     proper left/right columns. This matches what space-between already does on
+     desktop -- only the guaranteed gutter is new. Right-aligning matters: left
+     to itself the value box fills the leftover space and its text ends up
+     touching the label. */
+  .matrix .readout__value {
+    flex: 1 1 auto;
+    min-width: 0;
+    text-align: right;
+  }
+}
+
+/* Skill list. */
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* Each row is a <button>: clicking it opens that skill's full stack. It still
+   has to look like the plain row it replaced, so the UA form-control styling
+   is reset here rather than inherited. */
+.skill {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  width: 100%;
+  padding: var(--space-sm);
+  margin: 0;
+  font: inherit;
+  text-align: left;
+  color: inherit;
+  background: transparent;
+  border: var(--border) solid transparent;
+  cursor: pointer;
+}
+
+.skill:hover,
+.skill:focus-visible {
+  background: var(--surface-alt);
+  border-color: var(--ink);
+}
+
+.skill:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.skill__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.skill__name { color: var(--text); }
+.skill__name--teal    { color: var(--teal); }
+.skill__name--cobalt  { color: var(--cobalt); }
+.skill__name--gold    { color: var(--gold); }
+.skill__name--magenta { color: var(--magenta); }
+
+.skill__tech {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.card__divider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  border-bottom: var(--border) solid var(--ink);
+}
+
+/* ==========================================================================
+   SECTION 3 — CAMPAIGN LOG / SECTION 4 — ACADEMY RECORDS
+   Shared entry__ styles. Both sections use the same card anatomy, differing
+   only in the tag colour (teal for campaign, magenta for academy).
+   ========================================================================== */
+
+/* Generic vertical stack. Used by the Save section's contact list. */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.entry__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.entry__tag {
+  font-family: var(--font-badge);
+  letter-spacing: 0.06em;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.entry__tag--magenta { color: var(--magenta); }
+
+.entry__date {
+  padding: var(--space-xs);
+  background: var(--surface-alt);
+  border: var(--border) solid var(--ink);
+  font-family: var(--font-code);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.entry__title {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: var(--space-xs);
+}
+
+.entry__org {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--teal);
+}
+
+.entry__org--muted { color: var(--text-muted); }
+
+/* Bulleted objective list inside the main quest. */
+.entry__objectives {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-sm);
+  margin-block: var(--space-sm);
+  background: var(--surface-alt);
+  border: var(--border) solid var(--ink);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.entry__reward {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  padding-top: var(--space-sm);
+  border-top: var(--border) solid var(--ink);
+  font-family: var(--font-badge);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.entry__reward-status { color: var(--teal); }
+
+/* ==========================================================================
+   SECTION 4 — PROJECTS
+   ========================================================================== */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--gutter-mobile);
+}
+
+@media (min-width: 640px) {
+  .project-grid { gap: var(--gutter); }
+}
+
+@media (min-width: 768px) {
+  .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-md);
+  background: var(--surface);
+  border: var(--border-heavy) solid var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.project:hover {
+  border-color: var(--teal);
+}
+
+.project__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-sm);
+  border-bottom: var(--border) solid var(--ink);
+}
+
+.project__quest {
+  font-family: var(--font-badge);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.project__quest--gold    { color: var(--gold); }
+.project__quest--magenta { color: var(--magenta); }
+
+.project__thumb {
+  position: relative;
+  width: 100%;
+  height: 176px;
+  margin-bottom: var(--space-sm);
+  overflow: hidden;
+  background: var(--surface-high);
+  border: var(--border) solid var(--ink);
+}
+
+.project__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Desaturated until hover: keeps the grid calm, rewards exploration. */
+  filter: grayscale(1);
+}
+
+.project:hover .project__thumb img {
+  filter: grayscale(0);
+}
+
+.project__badge {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  padding: 0 4px;
+  background: var(--surface);
+  border: var(--border) solid var(--ink);
+  font-family: var(--font-badge);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--teal);
+}
+
+.project__title {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: var(--space-xs);
+}
+
+.project__desc {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: var(--space-sm);
+}
+
+.project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.project__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding-top: var(--space-xs);
+  border-top: var(--border) solid var(--ink);
+}
+
+.project__actions .btn { flex: 1; }
+
+/* ==========================================================================
+   SECTION 5 — TROPHY ROOM
+   ========================================================================== */
+
+.trophy-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.trophy-group + .trophy-group {
+  margin-top: var(--space-md);
+}
+
+.trophy-group__title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-body);
+  letter-spacing: 0.02em;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.trophy-group__title svg { width: 18px; height: 18px; }
+.trophy-group__title--magenta { color: var(--magenta); }
+
+.trophy-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .trophy-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .trophy-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.trophy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-sm);
+  background: var(--surface);
+  border: var(--border) solid var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+
+.trophy:hover { border-color: var(--teal); }
+
+.trophy__top {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.trophy__icon {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-alt);
+  border: var(--border) solid var(--ink);
+  color: var(--gold);
+}
+
+.trophy__icon svg { width: 22px; height: 22px; }
+
+.trophy__meta { display: flex; flex-direction: column; min-width: 0; }
+
+.trophy__issuer {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.trophy__name {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.35;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.trophy:hover .trophy__name { color: var(--teal); }
+
+.trophy__date {
+  font-family: var(--font-code);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.trophy__link {
+  margin-top: var(--space-sm);
+}
+
+/* ==========================================================================
+   SECTION 6 — SAVE POINT
+   ========================================================================== */
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xs);
+  padding: var(--space-sm);
+  background: var(--surface-alt);
+  border: var(--border) solid var(--ink);
+}
+
+/* The wrapper around the label and value is an unclassed span. It is a flex
+   item, so it needs an explicit min-width: 0 to be allowed below its content
+   width; otherwise the long email address below sets the row's floor. */
+.contact-row > span {
+  min-width: 0;
+}
+
+.contact-row__label {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+
+.contact-row__label--teal    { color: var(--teal); }
+.contact-row__label--magenta { color: var(--magenta); }
+.contact-row__label--gold    { color: var(--gold); }
+
+.contact-row__value {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--text);
+  /* The email is a single unbreakable 32-character token, which held the whole
+     page open at 372px and scrolled it sideways on narrower phones. It only
+     breaks when it genuinely cannot fit the line. */
+  overflow-wrap: anywhere;
+}
+
+/* Pseudo command prompt. */
+.console {
+  margin-top: var(--space-md);
+  padding: var(--space-sm);
+  background: var(--surface-alt);
+  border: var(--border) solid var(--ink);
+}
+
+.console__label {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.console__input-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.console__prompt {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--teal);
+}
+
+.console__input {
+  flex: 1;
+  min-width: 0;
+  padding: 4px 8px;
+  background: var(--surface);
+  border: var(--border) solid var(--ink);
+  outline: none;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1.0625rem;
+  color: var(--text);
+}
+
+.console__input::placeholder { color: var(--text-faint); }
+
+.console__input:focus {
+  border-color: var(--teal);
+  box-shadow: inset 2px 2px 0 var(--focus-inset);
+}
+
+.console__status {
+  margin-top: var(--space-xs);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--teal);
+}
+
+.console__status[hidden] { display: none; }
+
+/* Memory-card cartridge. */
+.cartridge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cartridge__slot {
+  width: 100%;
+  padding-bottom: var(--space-xs);
+  border-bottom: var(--border) solid var(--ink);
+  font-family: var(--font-badge);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.cartridge__shell {
+  width: 96px;
+  height: 112px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px;
+  margin-block: var(--space-md);
+  background: var(--surface-alt);
+  border: var(--border-heavy) solid var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+
+.cartridge__label {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--teal);
+  border: var(--border) solid var(--ink);
+  font-family: var(--font-badge);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--on-accent);
+}
+
+.cartridge__size {
+  font-family: var(--font-badge);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   MODAL
+   ========================================================================== */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  background: var(--backdrop);
+}
+
+.modal[hidden] { display: none; }
+
+.modal__panel {
+  position: relative;
+  width: 100%;
+  max-width: 672px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: var(--space-md);
+  background: var(--surface);
+  border: var(--border-heavy) solid var(--ink);
+  box-shadow: var(--shadow-xl);
+}
+
+@media (min-width: 1024px) {
+  .modal__panel { padding: var(--space-lg); }
+}
+
+.modal__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-sm);
+  border-bottom: var(--border) solid var(--ink);
+}
+
+.modal__category {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.modal__title {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: var(--space-xs);
+}
+
+.modal__desc {
+  padding: var(--space-sm);
+  margin-block: var(--space-sm);
+  background: var(--surface-alt);
+  border: var(--border) solid var(--ink);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.modal__stack-label {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.modal__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-block: var(--space-sm);
+}
+
+.modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-sm);
+  padding-top: var(--space-sm);
+  margin-top: var(--space-md);
+  border-top: var(--border) solid var(--ink);
+}
+
+/* Stop background scroll while the modal is open. */
+body.modal-open { overflow: hidden; }
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.site-footer {
+  width: 100%;
+  padding-block: var(--space-lg);
+  margin-bottom: 3rem;
+  background: var(--surface);
+  border-top: var(--border-heavy) solid var(--ink);
+}
+
+@media (min-width: 1024px) {
+  .site-footer { margin-bottom: 0; }
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .site-footer__inner {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.site-footer__copy {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.site-footer__year {
+  font-family: var(--font-code);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--teal);
+}
+
+.site-footer__name {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.site-footer__status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.site-footer__online { color: var(--teal); }
+
+/* ==========================================================================
+   BACK TO TOP
+   ========================================================================== */
+
+.to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 80px;
+  z-index: 45;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  color: var(--text);
+  border: var(--border) solid var(--ink);
+  box-shadow: var(--shadow);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+  .to-top { bottom: 24px; right: 24px; }
+}
+
+.to-top[hidden] { display: none; }
+
+.to-top:hover {
+  background: var(--teal);
+  color: var(--on-accent);
+}
+
+.to-top:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 var(--ink);
+}
