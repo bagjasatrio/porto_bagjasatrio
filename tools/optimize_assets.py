@@ -62,6 +62,9 @@ def process(name: str, *, cols: int = 0, crop: tuple[float, float, float, float]
             out_name: str | None = None, pixel_art: bool = True) -> tuple[str, int, int]:
     src = ASSETS / name
     if not src.exists():
+        if out_name and (ASSETS / out_name).exists():
+            dst = ASSETS / out_name
+            return dst.name, out_size[0], out_size[1], dst.stat().st_size
         raise SystemExit(f"missing source asset: {src}")
 
     # Defaults to in-place, but a job may write to a separate file so that a raw
@@ -112,10 +115,12 @@ def main() -> int:
         # covers the 224px slot at 2x DPR. profile.png stays an untouched source.
         dict(name="profile.png", out_name="avatar.png", out_size=(512, 512), pixel_art=False),
         # project thumbs: 16:9 cards, ~4 columns wide on desktop
+        dict(name="project-clipmax.png", cols=160, out_size=(640, 360)),
+        dict(name="project-clipmax-mobile.png", cols=160, out_size=(640, 360)),
+        dict(name="project-job-automation.png", cols=160, out_size=(640, 360)),
+        dict(name="project-losari-jaya.png", cols=160, out_size=(640, 360)),
+        dict(name="project-starfall.png", cols=160, out_size=(640, 360)),
         dict(name="project-damkar.png", cols=160, out_size=(640, 360)),
-        dict(name="project-discord-ai.png", cols=160, out_size=(640, 360)),
-        dict(name="project-microservices.png", cols=160, out_size=(640, 360)),
-        dict(name="project-ml-classifier.png", cols=160, out_size=(640, 360)),
         # og preview: 1200x630 social card, no quantization to keep text crisp-ish
         dict(name="og-preview.png", cols=200, out_size=(1200, 630), quantize=False),
     ]

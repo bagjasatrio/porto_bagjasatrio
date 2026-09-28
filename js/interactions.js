@@ -26,36 +26,59 @@
      All copy is UTF-8 with proper typographic characters.
      ===================================================================== */
   var projectDatabase = {
+    "clipmax": {
+      quest: "PROJECTS 1 // AUTONOMOUS AI & DESKTOP MULTIMEDIA",
+      title: "ClipMax — Autonomous Desktop AI Video Clipper",
+      desc: "Aplikasi desktop Python yang mengonversi video panjang menjadi klip vertikal 9:16 otomatis menggunakan AI. Dilengkapi Universal LLM Provider Gateway (9Router, OpenRouter, Groq, Gemini) untuk kurasi segmen viral, transkripsi Faster-Whisper terakselerasi CUDA, face-tracking otomatis MediaPipe, dan rendering FFmpeg NVENC dengan 85 automated test.",
+      tags: ["PYTHON", "CUDA", "FASTER_WHISPER", "MEDIAPIPE", "FFMPEG_NVENC", "LLM_GATEWAY", "PYTEST"],
+      liveUrl: "https://github.com/bagjasatrio/clipmax",
+      liveLabel: "[ Buka Repositori GitHub ]"
+    },
+    "clipmax-mobile": {
+      quest: "PROJECTS 2 // ON-DEVICE AI & MOBILE MULTIMEDIA",
+      title: "ClipMax Mobile — On-Device AI Video Studio",
+      desc: "Aplikasi mobile Flutter/Dart yang mengubah video panjang menjadi klip pendek langsung di perangkat (on-device). Mengintegrasikan Universal AI Router multi-provider (Gemini, Groq, OpenAI, OpenRouter), transkripsi audio Whisper.cpp native via Dart FFI, serta editor video multi-layer teks dan stiker berkinerja tinggi 120 FPS.",
+      tags: ["FLUTTER", "DART", "WHISPER_CPP", "DART_FFI", "ON_DEVICE_AI", "MULTI_LAYER_EDITOR"],
+      liveUrl: "https://github.com/bagjasatrio/clipmax-mobile",
+      liveLabel: "[ Buka Repositori GitHub ]"
+    },
+    "job-automation": {
+      quest: "PROJECTS 3 // AUTONOMOUS AGENT & BROWSER RPA",
+      title: "Job Application Automation & AI Career Co-Pilot",
+      desc: "Sistem otomasi pelamaran kerja end-to-end berbasis Python, Google Gemini, dan Playwright. Menjalankan pelamaran hybrid (cold email HRD dan portal LinkedIn, Glints, Jobstreet) dengan screening kualifikasi ATS (skor minimal 75%), filter anti-scam, serta pembuatan cover letter dan CV tailored otomatis. Dilengkapi remote control via Telegram Bot, sinkronisasi tracker Google Sheets, auto follow-up, dan 53 unit test.",
+      tags: ["PYTHON", "PLAYWRIGHT", "GEMINI_API", "TELEGRAM_BOT", "GOOGLE_SHEETS", "ATS_FILTER", "PYTEST"],
+      liveUrl: "https://github.com/bagjasatrio/job-apply-automation",
+      liveLabel: "[ Buka Repositori GitHub ]"
+    },
     "cvkita": {
-      quest: "PROJECTS 2 // FULL-STACK PRODUCT & DOCUMENT ENGINEERING",
-      title: "CVKita — Career Profile & ATS Resume Engine",
-      desc: "Platform yang menyatukan profil karir dalam satu sumber data, lalu menurunkannya menjadi PDF deterministik, pencocokan lowongan real-time, dan cover letter. Tantangan utamanya bukan menampilkan data, melainkan menjamin keluaran dokumen selalu identik untuk masukan yang sama — sehingga hasilnya konsisten dibaca mesin ATS dan tidak pernah mengarang isi CV pengguna.",
-      tags: ["NEXT_JS", "TAILWIND", "ATS_ENGINE", "PDF_GEN", "VERCEL"],
-      liveUrl: "https://cv-kita.vercel.app/"
+      quest: "PROJECTS 4 // FULL-STACK PRODUCT & DOCUMENT ENGINEERING",
+      title: "CVKita — AI-Powered Career Profile & Resume Platform",
+      desc: "Platform AI presisi tinggi untuk manajemen profil karier dan pembuatan resume yang disesuaikan dengan kualifikasi pekerjaan target (Job Matching & ATS Optimization). Menggunakan satu profil data tunggal untuk menghasilkan PDF deterministik bebas halusinasi, pencocokan lowongan real-time, dan cover letter generator.",
+      tags: ["NEXT_JS", "TAILWIND", "ATS_ENGINE", "PDF_GEN", "JOB_MATCHING", "VERCEL"],
+      liveUrl: "https://cv-kita.vercel.app/",
+      liveLabel: "[ Buka Live Demo ]"
+    },
+    "losari-jaya": {
+      quest: "PROJECTS 5 // FULL-STACK ERP & INVENTORY",
+      title: "Pengelolaan Gudang TB.Losari-Jaya-2",
+      desc: "Aplikasi web fullstack untuk sistem manajemen gudang, pelacakan inventaris bahan bangunan, dan sistem kasir (POS) di TB.Losari Jaya 2. Dirancang dengan manajemen stok otomatis, pencatatan transaksi real-time, serta pelaporan keluar-masuk barang yang akurat dan terstruktur.",
+      tags: ["FULLSTACK", "MYSQL", "REST_API", "INVENTORY_MANAGEMENT", "POS_SYSTEM"],
+      liveUrl: "https://github.com/bagjasatrio/TB.Losari-Jaya-2",
+      liveLabel: "[ Buka Repositori GitHub ]"
+    },
+    "starfall": {
+      quest: "PROJECTS 6 // E-COMMERCE & PAYMENT GATEWAY",
+      title: "Website TopUp Game Online dan Token Listrik",
+      desc: "Platform e-commerce layanan digital untuk top-up game online dan pembelian token listrik secara instan. Mengintegrasikan API aggregator produk dan payment gateway otomatis agar setiap transaksi diproses dan diselesaikan secara real-time tanpa intervensi manual.",
+      tags: ["PHP", "PAYMENT_GATEWAY", "API_INTEGRATION", "MYSQL", "E_COMMERCE"],
+      liveUrl: "https://github.com/bagjasatrio/starfallstore",
+      liveLabel: "[ Buka Repositori GitHub ]"
     },
     "damkar": {
-      quest: "PROJECTS 1 // WEB ARCHITECTURE & CITIZEN PORTAL",
+      quest: "PROJECTS 7 // WEB ARCHITECTURE & CITIZEN PORTAL",
       title: "Portal Dinas Pemadam Kebakaran Kota Semarang",
-      desc: "Portal resmi Dinas Pemadam Kebakaran Kota Semarang sebagai kanal informasi dan pelaporan darurat bagi warga. Antarmuka dibangun ulang dengan React dan transisi Framer Motion, sedangkan data titik rawan serta rute evakuasi ditarik lewat REST API agar peta interaktif selalu mengikuti data terbaru.",
-      tags: ["REACT", "REST_API", "TAILWIND", "GEOJSON", "CI_CD"]
-    },
-    "discord-ai": {
-      quest: "PROJECTS 3 // NLP & CONVERSATIONAL AI",
-      title: "AI Discord Agent",
-      desc: "Mengimplementasikan parsing konteks teks secara dinamis (NLP) pada bot Discord, sehingga percakapan multi-giliran tetap nyambung dan relevan. Bot merangkum, menjawab pertanyaan spesifik, dan mempertahankan riwayat konteks antar pesan dalam sebuah channel.",
-      tags: ["PYTHON", "NLP", "DISCORD_PY", "CONTEXT_PARSING", "ASYNC"]
-    },
-    "microservices": {
-      quest: "PROJECTS 4 // DISTRIBUTED SYSTEMS & BACKEND",
-      title: "Enterprise Cloud Microservice Hub",
-      desc: "Implementasi arsitektur microservice terdistribusi dengan API Gateway sebagai titik masuk tunggal, komunikasi antar layanan via message queue, serta pipeline CI/CD untuk otomatisasi build, test, dan deploy. Setiap layanan memiliki database dan siklus rilis yang independen.",
-      tags: ["DOCKER", "API_GATEWAY", "MESSAGE_QUEUE", "CI_CD", "MICROSERVICES"]
-    },
-    "ml-classifier": {
-      quest: "PROJECTS 5 // MACHINE LEARNING & TELEMETRY",
-      title: "ML Predictive Classifier Dashboard",
-      desc: "Pipeline machine learning end-to-end untuk klasifikasi prediktif, mulai dari exploratory data analysis, feature engineering, pelatihan dan evaluasi model, hingga penyajian hasil prediksi pada dashboard interaktif yang dapat dibaca tim non-teknis.",
-      tags: ["PYTHON", "SCIKIT_LEARN", "PANDAS", "FLASK", "DATA_VIS"]
+      desc: "Portal resmi Dinas Pemadam Kebakaran Kota Semarang sebagai kanal informasi dan pelaporan darurat bagi warga. Antarmuka dibangun secara modular dan responsif 100% pada perangkat mobile warga dan desktop ruang komando, dengan transisi Framer Motion dan data titik rawan yang terhubung via REST API.",
+      tags: ["REACT", "REST_API", "TAILWIND", "GEOJSON", "CI_CD", "KOMINFO_SEMARANG"]
     }
   };
 
@@ -70,40 +93,44 @@
     "frontend": {
       quest: "ATTRIBUTE // FRONTEND ARCHITECTURE",
       title: "Frontend Architecture",
-      desc: "Merancang dan membangun antarmuka web yang cepat, modular, dan mudah dipakai. Fokus pada struktur komponen yang rapi, responsif di semua ukuran layar, serta animasi yang halus tanpa mengorbankan performa.",
-      tags: ["REACT.JS", "TYPESCRIPT", "JAVASCRIPT", "TAILWIND_CSS", "BOOTSTRAP",
-             "FRAMER_MOTION", "GSAP", "HTML", "CSS"]
+      desc: "Merancang dan membangun antarmuka web modern yang cepat, modular, dan responsif 100% di semua perangkat. Berfokus pada arsitektur komponen yang bersih, performa rendering optimal, dan interaksi yang halus.",
+      tags: ["REACT.JS", "NEXT.JS", "TYPESCRIPT", "JAVASCRIPT", "TAILWIND_CSS",
+             "BOOTSTRAP", "FRAMER_MOTION", "HTML5", "CSS3"]
     },
     "backend": {
       quest: "ATTRIBUTE // BACKEND & API INTEGRATION",
       title: "Backend & API Integration",
-      desc: "Membangun layanan backend dan menghubungkan sistem lewat API. Berpengalaman mengintegrasikan layanan pihak ketiga, menangani autentikasi, serta menyambungkan payment gateway dan bot ke dalam alur aplikasi.",
-      tags: ["NODE.JS", "REST_API", "API_INTEGRATION", "LARAVEL", "PHP",
-             "PAYMENT_GATEWAYS", "LUA", "DISCORD_BOT_DEV"]
+      desc: "Membangun RESTful API yang andal, aman, dan berkinerja tinggi. Berpengalaman menghubungkan sistem ke pihak ketiga, menangani alur autentikasi, serta mengintegrasikan payment gateway otomatis.",
+      tags: ["PYTHON", "FASTAPI", "NODE.JS", "PHP", "LARAVEL",
+             "REST_API", "PAYMENT_GATEWAYS", "API_INTEGRATION"]
     },
     "ai": {
-      quest: "ATTRIBUTE // AI & AGENT ENGINEERING",
-      title: "AI & Agent Engineering",
-      desc: "Membangun agen AI dan memanfaatkan model bahasa untuk menyelesaikan tugas nyata, mulai dari parsing konteks percakapan sampai otomatisasi alur kerja.",
-      tags: ["AI", "AI_AGENT_DEVELOPMENT", "PYTHON"]
+      quest: "ATTRIBUTE // LLM INTEGRATION & API GATEWAY",
+      title: "LLM Integration & API Gateway",
+      desc: "Mengintegrasikan Large Language Models ke sistem produksi multi-provider melalui API gateway/proxy (OpenAI-compatible endpoints seperti 9Router, OpenRouter, Groq, dan Gemini API). Merancang prompt engineering presisi untuk mencegah halusinasi data.",
+      tags: ["UNIVERSAL_LLM_GATEWAY", "9ROUTER", "OPENROUTER", "GEMINI_API",
+             "GROQ", "PROMPT_ENGINEERING", "AI_AGENT_DEVELOPMENT"]
     },
-    "database": {
-      quest: "ATTRIBUTE // DATABASE & BACKEND SERVICES",
-      title: "Database & Backend Services",
-      desc: "Merancang skema data dan memilih layanan backend yang tepat sesuai kebutuhan aplikasi, dari basis data relasional sampai layanan terkelola untuk autentikasi dan penyimpanan realtime.",
-      tags: ["MYSQL", "FIREBASE", "SUPABASE"]
+    "mobile": {
+      quest: "ATTRIBUTE // MOBILE DEVELOPMENT",
+      title: "Mobile Development",
+      desc: "Mengembangkan aplikasi mobile performa tinggi dengan Flutter dan Dart. Mampu menjalankan inferensi AI on-device secara native menggunakan Dart FFI tanpa ketergantungan konstan pada koneksi server.",
+      tags: ["FLUTTER", "DART", "ON_DEVICE_AI", "WHISPER_CPP",
+             "DART_FFI", "120FPS_UI"]
+    },
+    "automation": {
+      quest: "ATTRIBUTE // AI & MEDIA AUTOMATION",
+      title: "AI & Media Automation",
+      desc: "Membangun sistem otomasi alur kerja cerdas dan pemrosesan multimedia: transkripsi audio terakselerasi CUDA (Faster-Whisper), pelacakan wajah (MediaPipe), GPU video rendering (FFmpeg NVENC), browser RPA (Playwright), bot Telegram, serta automated testing.",
+      tags: ["PLAYWRIGHT", "TELEGRAM_BOT_API", "FASTER_WHISPER", "CUDA",
+             "MEDIAPIPE", "FFMPEG_NVENC", "PYTEST"]
     },
     "devops": {
-      quest: "ATTRIBUTE // DEVOPS & TOOLING",
-      title: "DevOps & Tooling",
-      desc: "Menjaga alur kerja pengembangan tetap rapi dan dapat direproduksi, dari kontrol versi dan kontainerisasi sampai desain antarmuka dan alat bantu harian.",
-      tags: ["DOCKER", "GITHUB", "VS_CODE", "GOOGLE_ANTIGRAVITY", "FIGMA", "CANVA"]
-    },
-    "productivity": {
-      quest: "ATTRIBUTE // PRODUCTIVITY & DOCUMENTATION",
-      title: "Productivity & Documentation",
-      desc: "Menyusun dokumentasi teknis dan materi presentasi yang jelas, sehingga hasil kerja dapat dipahami dan ditindaklanjuti oleh tim maupun pemangku kepentingan non-teknis.",
-      tags: ["WORD", "POWERPOINT", "EXCEL"]
+      quest: "ATTRIBUTE // DEVOPS & DATABASE SERVICES",
+      title: "DevOps & Database Services",
+      desc: "Menerapkan pipeline CI/CD modern, orkestrasi kontainer Docker, serta pengelolaan basis data relasional maupun cloud services untuk menjamin stabilitas dan skalabilitas deployment.",
+      tags: ["DOCKER", "CI_CD", "GIT_GITHUB", "MYSQL", "POSTGRESQL",
+             "FIREBASE", "SUPABASE", "VERCEL"]
     }
   };
 
@@ -345,6 +372,7 @@
     if (live) {
       if (payload.liveUrl) {
         live.href = payload.liveUrl;
+        live.textContent = payload.liveLabel || "[ Buka Live Demo ]";
         live.style.display = "";
       } else {
         live.removeAttribute("href");

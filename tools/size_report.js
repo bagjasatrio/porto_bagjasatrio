@@ -52,11 +52,13 @@ const GROUPS = {
   ]},
   "Images (already compressed)": { firstLoad: true, files: [
     "assets/avatar.png",
+    "assets/project-clipmax.png",
+    "assets/project-clipmax-mobile.png",
+    "assets/project-job-automation.png",
     "assets/project-cvkita.png",
+    "assets/project-losari-jaya.png",
+    "assets/project-starfall.png",
     "assets/project-damkar.png",
-    "assets/project-discord-ai.png",
-    "assets/project-microservices.png",
-    "assets/project-ml-classifier.png",
   ]},
   "Social card (scrapers only, not first load)": { firstLoad: false, files: [
     "assets/og-preview.png",
